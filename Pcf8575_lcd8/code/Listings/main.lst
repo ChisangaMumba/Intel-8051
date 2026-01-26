@@ -1,0 +1,46 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              12/27/2024 22:09:43 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include <stdio.h>
+   3          #include <stdlib.h>
+   4          #include <./assets/LM75/LM75.h>
+   5          #include "assets/lcd/LCD_Serial.h"
+   6          //------------------------------------------------------------------------------
+   7          float tempr;
+   8          char out[30];
+   9          //------------------------------------------------------------------------------
+  10          int main() 
+  11          {
+  12   1        LCD_init(0x4E);       // Expander Address  
+  13   1        LM75_init();
+  14   1        
+  15   1        while(1)
+  16   1        {
+  17   2          tempr = LM75_read(TEMPERATURE_ADDRESS);
+  18   2          sprintf(out, "Tempr: %3.2f%cC", tempr, DEG_SYMBOL);  
+  19   2          LCD_string(0, 0, out);
+  20   2        }
+  21   1      }
+  22          //------------------------------------------------------------------------------
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    605    ----
+   CONSTANT SIZE    =     16    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     41      11
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
