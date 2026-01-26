@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\8051_Nokia_3310_glcd" 
+PRINT(".\Listings\8051_Nokia_3310_glcd.m51")

@@ -1,0 +1,87 @@
+C51 COMPILER V9.60.7.0   NOKIA_3310_GLCD                                                   03/12/2025 19:50:17 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE NOKIA_3310_GLCD
+OBJECT MODULE PLACED IN .\Objects\nokia_3310_glcd.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE assets\nokia\nokia_3310_glcd.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTE
+                    -ND PRINT(.\Listings\nokia_3310_glcd.lst) TABS(2) OBJECT(.\Objects\nokia_3310_glcd.obj)
+
+line level    source
+
+   1          #ifndef NOKIA_3310_GLCD_C
+   2          #define NOKIA_3310_GLCD_C
+   3          //------------------------------------------------------------------------------
+   4          #include <./assets/delay/delay.h>
+   5          #include <./assets/Soft_SPI/Soft_SPI.h>
+   6          #include "ascii_chars.h"
+   7          #include "nokia_3310_glcd.h"
+   8          //------------------------------------------------------------------------------
+   9          void LCD_init()
+  10          {
+  11   1        SPI_init();
+  12   1        
+  13   1        LCD_command(0x21);
+  14   1        LCD_command(0xC8);
+  15   1        LCD_command(0x06);
+  16   1        LCD_command(0x13); 
+  17   1        LCD_command(0x20);
+  18   1        LCD_command(0x0C);
+  19   1        LCD_command(0x40);
+  20   1        LCD_command(0x80); 
+  21   1      }
+  22          //------------------------------------------------------------------------------
+  23          void LCD_address(char row, char col)
+  24          {
+  25   1        DC = 0;                        //Data Register  ( Strings and characters ).
+  26   1        
+  27   1        SPI_write(0x40 | row); 
+  28   1        SPI_write(0x80 | (col * 6));
+  29   1        
+  30   1        DC = 1; 
+  31   1      }
+  32          //------------------------------------------------------------------------------
+  33          void LCD_command(char command)
+  34          {
+  35   1        CS1 = 0;
+  36   1        DC = 0;                        //Instruction Register ( commands ).
+  37   1        
+  38   1        SPI_write(command); 
+  39   1      }
+  40          //------------------------------------------------------------------------------
+  41          void LCD_string(char rowAddr, char colAddr, char * text)
+  42          {
+  43   1        DC = 1;
+  44   1        LCD_address(rowAddr, colAddr);  
+  45   1        
+  46   1        while(*text)
+  47   1        {
+  48   2          char chr, row, col;
+  49   2          
+  50   2          chr = *text++;
+  51   2          row = chr - ' '; //(Text-32)...because the first 32 ASCII character codes are none Printable (control ch
+             -ars)
+  52   2          
+  53   2          for(col = 0; col < 5; col++)
+C51 COMPILER V9.60.7.0   NOKIA_3310_GLCD                                                   03/12/2025 19:50:17 PAGE 2   
+
+  54   2          {
+  55   3            SPI_write(chars[row][col]);
+  56   3          }
+  57   2        }
+  58   1      }
+  59          //------------------------------------------------------------------------------
+  60          #endif
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    303    ----
+   CONSTANT SIZE    =    470    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4       6
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
