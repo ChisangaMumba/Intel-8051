@@ -1,0 +1,590 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    07/25/2025  08:32:19  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\main.obj TO .\Objects\8051_mcp3204 PRINT (.\Listings\8051_m
+>> cp3204.m51)
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FCAST)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (PRINTF)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPROUND)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPCONVERT)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPADD)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FTNPWR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?IMUL)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LNEG)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIIDATA)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CCASE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (PUTCHAR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (ISDIGIT)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (TOUPPER)
+
+
+LINK MAP OF MODULE:  .\Objects\8051_mcp3204 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000AH     UNIT         ?DT?_MAX7219_DISPLAYNUMBER?MAIN
+                    0012H     000EH                  *** GAP ***
+            BIT     0020H.0   0001H.1   UNIT         _BIT_GROUP_
+                    0021H.1   0000H.7                *** GAP ***
+            DATA    0022H     0023H     UNIT         ?DT?MAIN
+            DATA    0045H     001CH     UNIT         _DATA_GROUP_
+            IDATA   0061H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0598H     UNIT         ?C?LIB_CODE
+            CODE    0D98H     046FH     UNIT         ?PR?PRINTF?PRINTF
+            CODE    1207H     008CH     UNIT         ?C_C51STARTUP
+            CODE    1293H     0055H     UNIT         ?PR?MAIN?MAIN
+            CODE    12E8H     004CH     UNIT         ?PR?_MAX7219_DISPLAYTEXT?MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/25/2025  08:32:19  PAGE 2
+
+
+            CODE    1334H     0046H     UNIT         ?PR?_GETDPPOS?MAIN
+            CODE    137AH     0042H     UNIT         ?PR?_MCP320X_READ?MAIN
+            CODE    13BCH     0037H     UNIT         ?CO?MAIN
+            CODE    13F3H     0031H     UNIT         ?PR?_GETDIGIT?MAIN
+            CODE    1424H     002EH     UNIT         ?PR?_GETCUSTOMCHAR?MAIN
+            CODE    1452H     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
+            CODE    1479H     0023H     UNIT         ?PR?_MAX7219_DISPLAYNUMBER?MAIN
+            CODE    149CH     0021H     UNIT         ?PR?_MAX7219_INIT?MAIN
+            CODE    14BDH     0020H     UNIT         ?PR?SPI_READ?MAIN
+            CODE    14DDH     001EH     UNIT         ?PR?___DELAY_MS?MAIN
+            CODE    14FBH     001EH     UNIT         ?PR?_SPI_WRITE?MAIN
+            CODE    1519H     001AH     UNIT         ?C_INITSEG
+            CODE    1533H     0019H     UNIT         ?PR?_CALCVOLTAGE?MAIN
+            CODE    154CH     0011H     UNIT         ?PR?_TOUPPER?TOUPPER
+            CODE    155DH     000FH     UNIT         ?PR?_ISDIGIT?ISDIGIT
+            CODE    156CH     000EH     UNIT         ?PR?_WRITECHAR?MAIN
+            CODE    157AH     000DH     UNIT         ?PR?_MAX7219_WRITE?MAIN
+            CODE    1587H     000AH     UNIT         ?PR?___DELAY_US?MAIN
+            CODE    1591H     0007H     UNIT         ?PR?SPI_INIT?MAIN
+            CODE    1598H     0006H     UNIT         ?PR?MCP320X_INIT?MAIN
+            CODE    159EH     0006H     UNIT         ?PR?_MCP320X_GETVOLTAGE?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\8051_mcp3204 (?C_STARTUP)
+
+
+SEGMENT                                    BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT                   START    LENGTH     START    LENGTH
+---------------------------------------------------------------------------
+?C_C51STARTUP                           -----    -----      -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                           -----    -----      -----    -----
+  +--> ?PR?_MAX7219_INIT?MAIN
+  +--> ?PR?MCP320X_INIT?MAIN
+  +--> ?PR?_MCP320X_GETVOLTAGE?MAIN
+  +--> ?CO?MAIN
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_MAX7219_DISPLAYTEXT?MAIN
+  +--> ?PR?___DELAY_MS?MAIN
+
+?PR?_MAX7219_INIT?MAIN                  -----    -----      0045H    0001H
+  +--> ?PR?SPI_INIT?MAIN
+  +--> ?PR?_MAX7219_WRITE?MAIN
+
+?PR?_MAX7219_WRITE?MAIN                 -----    -----      -----    -----
+  +--> ?PR?_SPI_WRITE?MAIN
+
+?PR?MCP320X_INIT?MAIN                   -----    -----      -----    -----
+  +--> ?PR?SPI_INIT?MAIN
+
+?PR?_MCP320X_GETVOLTAGE?MAIN            -----    -----      -----    -----
+  +--> ?PR?_MCP320X_READ?MAIN
+  +--> ?PR?_CALCVOLTAGE?MAIN
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/25/2025  08:32:19  PAGE 3
+
+
+?PR?_MCP320X_READ?MAIN                  -----    -----      0045H    0002H
+  +--> ?PR?_SPI_WRITE?MAIN
+  +--> ?PR?SPI_READ?MAIN
+
+?PR?PRINTF?PRINTF                       0020H.0  0001H.1    0045H    001CH
+  +--> ?PR?PUTCHAR?PUTCHAR
+
+?PR?_MAX7219_DISPLAYTEXT?MAIN           -----    -----      0045H    0005H
+  +--> ?PR?_GETDPPOS?MAIN
+  +--> ?PR?_WRITECHAR?MAIN
+
+?PR?_GETDPPOS?MAIN                      -----    -----      004AH    0007H
+
+?PR?_WRITECHAR?MAIN                     -----    -----      004AH    0001H
+  +--> ?PR?_GETDIGIT?MAIN
+  +--> ?PR?_MAX7219_WRITE?MAIN
+
+?PR?_GETDIGIT?MAIN                      -----    -----      004BH    0004H
+  +--> ?PR?_ISDIGIT?ISDIGIT
+  +--> ?CO?MAIN
+  +--> ?PR?_GETCUSTOMCHAR?MAIN
+
+?PR?_GETCUSTOMCHAR?MAIN                 -----    -----      004FH    0003H
+  +--> ?CO?MAIN
+  +--> ?PR?_TOUPPER?TOUPPER
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\8051_mcp3204 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:1207H         SEGMENT       ?C_C51STARTUP
+  I:0061H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:120AH         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:1207H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/25/2025  08:32:19  PAGE 4
+
+
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:1207H         LINE#         133
+  C:1209H         LINE#         134
+  C:120AH         LINE#         135
+  C:120BH         LINE#         136
+  C:120DH         LINE#         185
+  C:1210H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  C:1591H         PUBLIC        SPI_init
+  C:13C9H         PUBLIC        digits
+  D:0022H         PUBLIC        dpPos
+  D:00A8H         PUBLIC        IE
+  B:0090H.0       PUBLIC        SDOUT
+  D:002CH         PUBLIC        isDpFound
+  C:14DDH         PUBLIC        ___delay_ms
+  C:13D3H         PUBLIC        chars
+  D:00B8H         PUBLIC        IP
+  C:1587H         PUBLIC        ___delay_us
+  C:13E3H         PUBLIC        charCode
+  C:12E8H         PUBLIC        _max7219_displayText
+  C:1293H         PUBLIC        main
+  C:1334H         PUBLIC        _getDpPos
+  C:157AH         PUBLIC        _max7219_write
+  B:0090H.2       PUBLIC        SCLK
+  C:156CH         PUBLIC        _writeChar
+  B:0090H.1       PUBLIC        SDIN
+  C:149CH         PUBLIC        _max7219_init
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:13F3H         PUBLIC        _getDigit
+  D:002DH         PUBLIC        volts
+  C:1424H         PUBLIC        _getCustomChar
+  B:0090H.3       PUBLIC        CS1
+  B:0090H.4       PUBLIC        CS2
+  C:159EH         PUBLIC        _mcp320x_getVoltage
+  C:137AH         PUBLIC        _mcp320x_read
+  D:0031H         PUBLIC        str
+  D:003DH         PUBLIC        channel
+  C:1479H         PUBLIC        _max7219_displayNumber
+  C:1598H         PUBLIC        mcp320x_init
+  D:00C8H         PUBLIC        T2CON
+  C:14BDH         PUBLIC        SPI_read
+  C:1533H         PUBLIC        _calcVoltage
+  D:00D0H         PUBLIC        PSW
+  C:14FBH         PUBLIC        _SPI_write
+  -------         PROC          ___DELAY_MS
+  D:0006H         SYMBOL        d
+  -------         DO            
+  D:0004H         SYMBOL        a
+  -------         ENDDO         
+  C:14DDH         LINE#         4
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/25/2025  08:32:19  PAGE 5
+
+
+  C:14DDH         LINE#         5
+  C:14DDH         LINE#         7
+  C:14E6H         LINE#         8
+  C:14FAH         LINE#         9
+  -------         ENDPROC       ___DELAY_MS
+  -------         PROC          ___DELAY_US
+  D:0007H         SYMBOL        d
+  C:1587H         LINE#         11
+  C:1587H         LINE#         12
+  C:1587H         LINE#         13
+  C:1590H         LINE#         14
+  -------         ENDPROC       ___DELAY_US
+  -------         PROC          SPI_INIT
+  C:1591H         LINE#         6
+  C:1591H         LINE#         7
+  C:1591H         LINE#         8
+  C:1593H         LINE#         9
+  C:1595H         LINE#         10
+  C:1597H         LINE#         11
+  -------         ENDPROC       SPI_INIT
+  -------         PROC          _SPI_WRITE
+  D:0007H         SYMBOL        send
+  -------         DO            
+  D:0006H         SYMBOL        tx
+  -------         ENDDO         
+  C:14FBH         LINE#         13
+  C:14FBH         LINE#         14
+  C:14FBH         LINE#         17
+  C:14FDH         LINE#         18
+  C:14FDH         LINE#         19
+  C:14FFH         LINE#         20
+  C:1512H         LINE#         21
+  C:1514H         LINE#         22
+  C:1518H         LINE#         23
+  -------         ENDPROC       _SPI_WRITE
+  -------         PROC          SPI_READ
+  -------         DO            
+  D:0006H         SYMBOL        rx
+  D:0007H         SYMBOL        data_
+  -------         ENDDO         
+  C:14BDH         LINE#         25
+  C:14BDH         LINE#         26
+  C:14BDH         LINE#         27
+  C:14BFH         LINE#         29
+  C:14C0H         LINE#         30
+  C:14C0H         LINE#         31
+  C:14C2H         LINE#         32
+  C:14D6H         LINE#         33
+  C:14D8H         LINE#         34
+  C:14DCH         LINE#         36
+  C:14DCH         LINE#         37
+  -------         ENDPROC       SPI_READ
+  -------         PROC          MCP320X_INIT
+  C:1598H         LINE#         7
+  C:1598H         LINE#         8
+  C:1598H         LINE#         9
+  C:159BH         LINE#         11
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/25/2025  08:32:19  PAGE 6
+
+
+  C:159DH         LINE#         12
+  -------         ENDPROC       MCP320X_INIT
+  -------         PROC          _MCP320X_READ
+  D:0004H         SYMBOL        mode
+  D:0005H         SYMBOL        chn
+  -------         DO            
+  D:0045H         SYMBOL        data_
+  D:0006H         SYMBOL        cmd
+  -------         ENDDO         
+  C:137AH         LINE#         14
+  C:137CH         LINE#         15
+  C:137CH         LINE#         17
+  C:138CH         LINE#         19
+  C:138EH         LINE#         21
+  C:139DH         LINE#         22
+  C:13A2H         LINE#         23
+  C:13A7H         LINE#         25
+  C:13A9H         LINE#         27
+  C:13BBH         LINE#         28
+  -------         ENDPROC       _MCP320X_READ
+  -------         PROC          _MCP320X_GETVOLTAGE
+  D:0007H         SYMBOL        mode
+  D:0005H         SYMBOL        chn
+  -------         DO            
+  D:0006H         SYMBOL        rawData
+  -------         ENDDO         
+  C:159EH         LINE#         30
+  C:159EH         LINE#         31
+  C:159EH         LINE#         32
+  C:15A1H         LINE#         34
+  -------         ENDPROC       _MCP320X_GETVOLTAGE
+  -------         PROC          _CALCVOLTAGE
+  D:0006H         SYMBOL        adcValue
+  -------         DO            
+  D:0004H         SYMBOL        Vin
+  -------         ENDDO         
+  C:1533H         LINE#         37
+  C:1533H         LINE#         38
+  C:1533H         LINE#         39
+  -------         ENDPROC       _CALCVOLTAGE
+  -------         PROC          _MAX7219_INIT
+  D:0045H         SYMBOL        scanSize
+  C:149CH         LINE#         7
+  C:149EH         LINE#         8
+  C:149EH         LINE#         9
+  C:14A1H         LINE#         11
+  C:14A8H         LINE#         12
+  C:14AFH         LINE#         13
+  C:14B6H         LINE#         14
+  -------         ENDPROC       _MAX7219_INIT
+  -------         PROC          _MAX7219_WRITE
+  D:0007H         SYMBOL        reg
+  D:0005H         SYMBOL        _data
+  C:157AH         LINE#         17
+  C:157AH         LINE#         18
+  C:157AH         LINE#         19
+  C:157CH         LINE#         21
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/25/2025  08:32:19  PAGE 7
+
+
+  C:157FH         LINE#         22
+  C:1584H         LINE#         24
+  C:1586H         LINE#         25
+  -------         ENDPROC       _MAX7219_WRITE
+  -------         PROC          _MAX7219_DISPLAYNUMBER
+  D:0004H         SYMBOL        number
+  -------         DO            
+  D:0008H         SYMBOL        strNum
+  -------         ENDDO         
+  C:1479H         LINE#         27
+  C:1479H         LINE#         28
+  C:1479H         LINE#         30
+  C:1493H         LINE#         32
+  -------         ENDPROC       _MAX7219_DISPLAYNUMBER
+  -------         PROC          _MAX7219_DISPLAYTEXT
+  D:0045H         SYMBOL        text
+  -------         DO            
+  D:0048H         SYMBOL        chrPos
+  D:0049H         SYMBOL        i
+  D:0007H         SYMBOL        chr
+  -------         ENDDO         
+  C:12E8H         LINE#         35
+  C:12EEH         LINE#         36
+  C:12EEH         LINE#         37
+  C:12F1H         LINE#         39
+  C:12F5H         LINE#         40
+  C:1303H         LINE#         42
+  C:1318H         LINE#         43
+  C:1318H         LINE#         44
+  C:1318H         LINE#         46
+  C:1321H         LINE#         47
+  C:1321H         LINE#         48
+  C:132DH         LINE#         49
+  C:132FH         LINE#         50
+  C:132FH         LINE#         51
+  C:1333H         LINE#         52
+  -------         ENDPROC       _MAX7219_DISPLAYTEXT
+  -------         PROC          _WRITECHAR
+  D:0007H         SYMBOL        chr
+  D:004AH         SYMBOL        chrPos
+  D:0003H         SYMBOL        dpPos
+  -------         DO            
+  D:0005H         SYMBOL        digit
+  -------         ENDDO         
+  C:156CH         LINE#         54
+  C:156EH         LINE#         55
+  C:156EH         LINE#         56
+  C:1573H         LINE#         57
+  -------         ENDPROC       _WRITECHAR
+  -------         PROC          _GETDIGIT
+  D:004BH         SYMBOL        chr
+  D:004CH         SYMBOL        chrPos
+  D:004DH         SYMBOL        dpPos
+  -------         DO            
+  D:004EH         SYMBOL        digit
+  -------         ENDDO         
+  C:13F3H         LINE#         60
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/25/2025  08:32:19  PAGE 8
+
+
+  C:13F9H         LINE#         61
+  C:13F9H         LINE#         62
+  C:13FCH         LINE#         64
+  C:1411H         LINE#         66
+  C:1423H         LINE#         67
+  -------         ENDPROC       _GETDIGIT
+  -------         PROC          _GETCUSTOMCHAR
+  D:004FH         SYMBOL        chr
+  -------         DO            
+  D:0050H         SYMBOL        i
+  D:0051H         SYMBOL        digit
+  -------         ENDDO         
+  C:1424H         LINE#         69
+  C:1426H         LINE#         70
+  C:1426H         LINE#         71
+  C:142BH         LINE#         73
+  C:1433H         LINE#         74
+  C:1433H         LINE#         75
+  C:1441H         LINE#         76
+  C:1441H         LINE#         77
+  C:1449H         LINE#         78
+  C:144BH         LINE#         79
+  C:144BH         LINE#         80
+  C:144DH         LINE#         81
+  C:144FH         LINE#         83
+  C:1451H         LINE#         84
+  -------         ENDPROC       _GETCUSTOMCHAR
+  -------         PROC          _GETDPPOS
+  D:004AH         SYMBOL        dpPos
+  D:004DH         SYMBOL        chars
+  -------         DO            
+  D:0050H         SYMBOL        i
+  D:0007H         SYMBOL        pos
+  -------         ENDDO         
+  C:1334H         LINE#         86
+  C:133AH         LINE#         87
+  C:133AH         LINE#         88
+  C:133CH         LINE#         90
+  C:134FH         LINE#         91
+  C:134FH         LINE#         92
+  C:1352H         LINE#         93
+  C:1352H         LINE#         94
+  C:136BH         LINE#         96
+  C:136FH         LINE#         97
+  C:1372H         LINE#         98
+  C:1374H         LINE#         100
+  C:1374H         LINE#         101
+  C:1375H         LINE#         102
+  C:1375H         LINE#         103
+  C:1379H         LINE#         104
+  -------         ENDPROC       _GETDPPOS
+  -------         PROC          MAIN
+  C:1293H         LINE#         12
+  C:1293H         LINE#         13
+  C:1293H         LINE#         14
+  C:1298H         LINE#         15
+  C:129BH         LINE#         17
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/25/2025  08:32:19  PAGE 9
+
+
+  C:129BH         LINE#         18
+  C:129BH         LINE#         20
+  C:12AAH         LINE#         22
+  C:12D6H         LINE#         23
+  C:12DFH         LINE#         25
+  C:12E6H         LINE#         26
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?FPMUL
+  C:0800H         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FPDIV
+  C:0909H         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?FCAST
+  C:09B0H         PUBLIC        ?C?FCASTC
+  C:09ABH         PUBLIC        ?C?FCASTI
+  C:09A6H         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        PRINTF
+  D:0045H         PUBLIC        ?_PRINTF?BYTE
+  D:0045H         PUBLIC        ?_SPRINTF?BYTE
+  C:0DFAH         PUBLIC        _PRINTF
+  C:0DF4H         PUBLIC        _SPRINTF
+  -------         ENDMOD        PRINTF
+
+  -------         MODULE        ?C?FPROUND
+  C:0A2EH         PUBLIC        ?C?FPROUND
+  -------         ENDMOD        ?C?FPROUND
+
+  -------         MODULE        ?C?FPCONVERT
+  C:0A5DH         PUBLIC        ?C?FPCONVERT
+  -------         ENDMOD        ?C?FPCONVERT
+
+  -------         MODULE        ?C?FPADD
+  C:0B67H         PUBLIC        ?C?FPADD
+  C:0B63H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+  -------         MODULE        ?C?FTNPWR
+  C:0C88H         PUBLIC        ?C?FTNPWR
+  -------         ENDMOD        ?C?FTNPWR
+
+  -------         MODULE        ?C?CLDPTR
+  C:0CC8H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0CE1H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:0D0EH         PUBLIC        ?C?CSTPTR
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/25/2025  08:32:19  PAGE 10
+
+
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?CSTOPTR
+  C:0D20H         PUBLIC        ?C?CSTOPTR
+  -------         ENDMOD        ?C?CSTOPTR
+
+  -------         MODULE        ?C?IMUL
+  C:0D42H         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+  -------         MODULE        ?C?LNEG
+  C:0D54H         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+  -------         MODULE        ?C?PLDIIDATA
+  C:0D62H         PUBLIC        ?C?PLDIIDATA
+  -------         ENDMOD        ?C?PLDIIDATA
+
+  -------         MODULE        ?C?CCASE
+  C:0D72H         PUBLIC        ?C?CCASE
+  -------         ENDMOD        ?C?CCASE
+
+  -------         MODULE        PUTCHAR
+  C:1452H         PUBLIC        _PUTCHAR
+  -------         ENDMOD        PUTCHAR
+
+  -------         MODULE        ISDIGIT
+  C:155DH         PUBLIC        _isdigit
+  -------         ENDMOD        ISDIGIT
+
+  -------         MODULE        TOUPPER
+  C:154CH         PUBLIC        _toupper
+  -------         ENDMOD        TOUPPER
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?___DELAY_US?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_MAX7219_DISPLAYNUMBER?MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 02D8H BYTE (35%) *
+******************************************************************************
+
+Program Size: data=83.1 xdata=0 code=3495
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)

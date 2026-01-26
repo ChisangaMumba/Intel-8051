@@ -1,0 +1,52 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              07/25/2025 08:32:19 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          //------------------------------------------------------------------------------
+   2          #include<reg52.h>
+   3          #include <stdio.h>
+   4          #include <./assets/delay/delay.h>
+   5          #include <./assets/stdint/stdint.h>
+   6          #include <./assets/mcp320x/mcp320x.h>
+   7          #include <./assets/max7219/max7219.h>
+   8          //------------------------------------------------------------------------------
+   9          float volts;
+  10          uint8_t str[12];
+  11          //------------------------------------------------------------------------------
+  12          int main() 
+  13          {
+  14   1        max7219_init(SCAN_ALL_DIGITS);
+  15   1        mcp320x_init();
+  16   1        
+  17   1        while(1)
+  18   1        {
+  19   2          // LM35 produces voltage equivalent to temperature
+  20   2          volts = mcp320x_getVoltage(DIFFERENTIAL_MODE, 3);   // // DIFFERENTIAL_MODE or SINGLE_MODE
+  21   2      
+  22   2          sprintf(str, "%7.2f°C", volts * 100);
+  23   2          max7219_displayText(str);
+  24   2          
+  25   2          __delay_ms(100);
+  26   2        }
+  27   1      }
+  28          //------------------------------------------------------------------------------
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    633    ----
+   CONSTANT SIZE    =     55    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     35      33
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
