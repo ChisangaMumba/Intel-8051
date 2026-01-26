@@ -1,0 +1,55 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              01/14/2025 12:53:29 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include <stdio.h>
+   3          #include <stdlib.h>
+   4          #include "assets/Ext_Intr/Ext_Intr.h"
+   5          #include <./assets/pcf2123/pcf2123.h>
+   6          #include <./assets/MAX7219/MAX7219.h>
+   7          //------------------------------------------------------------------------------
+   8          char str[10];  
+   9          int time[7]; //Sec,Min,Hour,WDay,MDay,Month,Year
+  10          //------------------------------------------------------------------------------
+  11          int main() 
+  12          {   
+  13   1        MAX7219_init(SCAN_ALL_DIGITS);
+  14   1        PCF2123_init();
+  15   1        ExtInt0_init();
+  16   1        //PCF2123_setDateTime(time);   //Uncomment to set time as needed
+  17   1            
+  18   1        while(1)
+  19   1        { 
+  20   2          PCF2123_getDateTime(time);
+  21   2        
+  22   2          if(LED0)
+  23   2            strcpy(str, get_TimeStr(time));
+  24   2          else
+  25   2              if(LED1)
+  26   2                strcpy(str, get_DateStr(time));
+  27   2          
+  28   2          MAX7219_displayNumText(str);  
+  29   2        }
+  30   1      }
+  31          //------------------------------------------------------------------------------
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    831    ----
+   CONSTANT SIZE    =     17    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     24      49
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

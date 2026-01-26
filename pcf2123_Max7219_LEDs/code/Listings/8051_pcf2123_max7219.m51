@@ -1,0 +1,558 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    01/14/2025  12:53:30  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\main.obj TO .\Objects\8051_pcf2123_max7219 PRINT (.\Listing
+>> s\8051_pcf2123_max7219.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?IMUL)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?SIDIV)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?ILDPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?ILDOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?ISTPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?ISTOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (PRINTF)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?STRCPY)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (STRLEN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?UIDIV)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIIDATA)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CCASE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (PUTCHAR)
+
+
+LINK MAP OF MODULE:  .\Objects\8051_pcf2123_max7219 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0018H     UNIT         ?DT?MAIN
+            BIT     0020H.0   0001H.1   UNIT         _BIT_GROUP_
+                    0021H.1   0000H.7                *** GAP ***
+            DATA    0022H     001FH     UNIT         _DATA_GROUP_
+            DATA    0041H     000FH     UNIT         ?DT?_MAX7219_DISPLAYNUMBER?MAIN
+            DATA    0050H     0003H     UNIT         ?DT?_PCF2123_SETDATETIME?MAIN
+            IDATA   0053H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     07FAH                  *** GAP ***
+            CODE    0800H     035CH     UNIT         ?PR?PRINTF?PRINTF
+            CODE    0B5CH     02C3H     UNIT         ?C?LIB_CODE
+            CODE    0E1FH     006AH     UNIT         ?PR?_PCF2123_GETDATETIME?MAIN
+            CODE    0E89H     0058H     UNIT         ?PR?_PCF2123_SETDATETIME?MAIN
+            CODE    0EE1H     004FH     UNIT         ?PR?_GETDIGIT?MAIN
+            CODE    0F30H     0043H     UNIT         ?PR?_MAX7219_DISPLAYNUMTEXT?MAIN
+            CODE    0F73H     0042H     UNIT         ?PR?MAIN?MAIN
+            CODE    0FB5H     0040H     UNIT         ?PR?_GET_DATESTR?MAIN
+            CODE    0FF5H     003DH     UNIT         ?PR?_GET_TIMESTR?MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  12:53:30  PAGE 2
+
+
+            CODE    1032H     0038H     UNIT         ?PR?_SPI_WRITE?MAIN
+            CODE    106AH     0034H     UNIT         ?PR?_GET_DECTIME?MAIN
+            CODE    109EH     002FH     UNIT         ?PR?_GET_BCDTIME?MAIN
+            CODE    10CDH     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
+            CODE    10F4H     0021H     UNIT         ?PR?SPI_READ?MAIN
+            CODE    1115H     0021H     UNIT         ?PR?_MAX7219_INIT?MAIN
+            CODE    1136H     001FH     UNIT         ?PR?_MAX7219_DISPLAYNUMBER?MAIN
+            CODE    1155H     0015H     UNIT         ?PR?_STRLEN?STRLEN
+            CODE    116AH     0011H     UNIT         ?CO?MAIN
+            CODE    117BH     000FH     UNIT         ?PR?_MAX7219_WRITE?MAIN
+            CODE    118AH     000CH     UNIT         ?C_C51STARTUP
+            CODE    1196H     000CH     UNIT         ?PR?EXTINT0_ISR?MAIN
+            CODE    11A2H     000BH     UNIT         ?PR?EXTINT0_INIT?MAIN
+            CODE    11ADH     0007H     UNIT         ?PR?SPI_INIT?MAIN
+            CODE    11B4H     0003H     UNIT         ?PR?PCF2123_INIT?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\8051_pcf2123_max7219 (?C_STARTUP)
+
+
+SEGMENT                                     BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT                    START    LENGTH     START    LENGTH
+----------------------------------------------------------------------------
+?C_C51STARTUP                            -----    -----      -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                            -----    -----      -----    -----
+  +--> ?PR?_MAX7219_INIT?MAIN
+  +--> ?PR?PCF2123_INIT?MAIN
+  +--> ?PR?EXTINT0_INIT?MAIN
+  +--> ?PR?_PCF2123_GETDATETIME?MAIN
+  +--> ?PR?_GET_TIMESTR?MAIN
+  +--> ?PR?_GET_DATESTR?MAIN
+  +--> ?PR?_MAX7219_DISPLAYNUMTEXT?MAIN
+
+?PR?_MAX7219_INIT?MAIN                   -----    -----      0022H    0001H
+  +--> ?PR?SPI_INIT?MAIN
+  +--> ?PR?_MAX7219_WRITE?MAIN
+
+?PR?_MAX7219_WRITE?MAIN                  -----    -----      -----    -----
+  +--> ?PR?_SPI_WRITE?MAIN
+
+?PR?_SPI_WRITE?MAIN                      -----    -----      -----    -----
+  +--> ?PR?_GET_BCDTIME?MAIN
+
+?PR?PCF2123_INIT?MAIN                    -----    -----      -----    -----
+  +--> ?PR?SPI_INIT?MAIN
+
+?PR?_PCF2123_GETDATETIME?MAIN            -----    -----      0022H    0003H
+  +--> ?PR?_SPI_WRITE?MAIN
+  +--> ?PR?SPI_READ?MAIN
+  +--> ?PR?_GET_DECTIME?MAIN
+
+?PR?_GET_DECTIME?MAIN                    -----    -----      -----    -----
+  +--> ?PR?SPI_READ?MAIN
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  12:53:30  PAGE 3
+
+
+?PR?_GET_TIMESTR?MAIN                    -----    -----      0022H    000BH
+  +--> ?CO?MAIN
+  +--> ?PR?PRINTF?PRINTF
+
+?PR?PRINTF?PRINTF                        0020H.0  0001H.1    002DH    0014H
+  +--> ?PR?PUTCHAR?PUTCHAR
+
+?PR?_GET_DATESTR?MAIN                    -----    -----      0022H    000BH
+  +--> ?CO?MAIN
+  +--> ?PR?PRINTF?PRINTF
+
+?PR?_MAX7219_DISPLAYNUMTEXT?MAIN         -----    -----      0022H    0005H
+  +--> ?PR?_STRLEN?STRLEN
+  +--> ?PR?_GETDIGIT?MAIN
+  +--> ?PR?_MAX7219_WRITE?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\8051_pcf2123_max7219 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:118AH         SEGMENT       ?C_C51STARTUP
+  I:0053H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:118DH         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:118AH         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:118AH         LINE#         133
+  C:118CH         LINE#         134
+  C:118DH         LINE#         135
+  C:118EH         LINE#         136
+  C:1190H         LINE#         185
+  C:1193H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  12:53:30  PAGE 4
+
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  C:11ADH         PUBLIC        SPI_init
+  C:1136H         PUBLIC        _MAX7219_displayNumber
+  B:0090H.6       PUBLIC        LED0
+  B:00A8H.7       PUBLIC        EA
+  B:0090H.7       PUBLIC        LED1
+  D:00A8H         PUBLIC        IE
+  B:0090H.0       PUBLIC        SDOUT
+  D:00B8H         PUBLIC        IP
+  C:0F73H         PUBLIC        main
+  C:11A2H         PUBLIC        ExtInt0_init
+  B:0090H.2       PUBLIC        SCLK
+  B:0090H.1       PUBLIC        SDIN
+  D:0008H         PUBLIC        time
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:0EE1H         PUBLIC        _getDigit
+  C:11B4H         PUBLIC        PCF2123_init
+  C:1196H         PUBLIC        ExtInt0_isr
+  C:107EH         PUBLIC        _get_DecTime
+  B:0090H.3       PUBLIC        CS1
+  B:0090H.4       PUBLIC        CS2
+  C:117BH         PUBLIC        _MAX7219_write
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  C:1115H         PUBLIC        _MAX7219_init
+  C:0E1FH         PUBLIC        _PCF2123_getDateTime
+  D:0016H         PUBLIC        str
+  C:0FB5H         PUBLIC        _get_DateStr
+  C:0E89H         PUBLIC        _PCF2123_setDateTime
+  D:00C8H         PUBLIC        T2CON
+  C:10F4H         PUBLIC        SPI_read
+  C:0FF5H         PUBLIC        _get_TimeStr
+  C:0F30H         PUBLIC        _MAX7219_displayNumText
+  D:00D0H         PUBLIC        PSW
+  C:1041H         PUBLIC        _SPI_write
+  C:109EH         PUBLIC        _get_BCDTime
+  -------         PROC          EXTINT0_INIT
+  C:11A2H         LINE#         7
+  C:11A2H         LINE#         8
+  C:11A2H         LINE#         9
+  C:11A4H         LINE#         10
+  C:11A6H         LINE#         11
+  C:11A8H         LINE#         13
+  C:11AAH         LINE#         14
+  C:11ACH         LINE#         15
+  -------         ENDPROC       EXTINT0_INIT
+  -------         PROC          EXTINT0_ISR
+  C:1196H         LINE#         18
+  C:1198H         LINE#         20
+  C:119AH         LINE#         21
+  C:119FH         LINE#         22
+  -------         ENDPROC       EXTINT0_ISR
+  -------         PROC          SPI_INIT
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  12:53:30  PAGE 5
+
+
+  C:11ADH         LINE#         6
+  C:11ADH         LINE#         7
+  C:11ADH         LINE#         8
+  C:11AFH         LINE#         9
+  C:11B1H         LINE#         10
+  C:11B3H         LINE#         11
+  -------         ENDPROC       SPI_INIT
+  C:1038H         SYMBOL        L?0059
+  C:103BH         SYMBOL        L?0060
+  -------         PROC          L?0058
+  -------         ENDPROC       L?0058
+  C:1038H         SYMBOL        L?0059
+  C:103BH         SYMBOL        L?0060
+  -------         PROC          _SPI_WRITE
+  D:0005H         SYMBOL        send
+  -------         DO            
+  D:0004H         SYMBOL        tx
+  -------         ENDDO         
+  C:1041H         LINE#         13
+  C:1043H         LINE#         14
+  C:1043H         LINE#         16
+  C:1045H         LINE#         17
+  C:1045H         LINE#         18
+  C:1047H         LINE#         19
+  C:1063H         LINE#         20
+  C:1065H         LINE#         21
+  C:1069H         LINE#         22
+  -------         ENDPROC       _SPI_WRITE
+  -------         PROC          SPI_READ
+  -------         DO            
+  D:0006H         SYMBOL        Rx
+  D:0005H         SYMBOL        bitVal
+  D:0007H         SYMBOL        _data
+  -------         ENDDO         
+  C:10F4H         LINE#         24
+  C:10F4H         LINE#         25
+  C:10F4H         LINE#         26
+  C:10F6H         LINE#         27
+  C:10F7H         LINE#         28
+  C:10F7H         LINE#         29
+  C:10F9H         LINE#         30
+  C:10FEH         LINE#         31
+  C:110EH         LINE#         32
+  C:1110H         LINE#         33
+  C:1114H         LINE#         35
+  C:1114H         LINE#         36
+  -------         ENDPROC       SPI_READ
+  C:1070H         SYMBOL        L?0056
+  C:1076H         SYMBOL        L?0057
+  -------         PROC          L?0055
+  -------         ENDPROC       L?0055
+  C:1070H         SYMBOL        L?0056
+  C:1076H         SYMBOL        L?0057
+  -------         PROC          _GET_DECTIME
+  D:0002H         SYMBOL        time
+  C:107EH         LINE#         4
+  C:1082H         LINE#         5
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  12:53:30  PAGE 6
+
+
+  C:1082H         LINE#         6
+  C:109DH         LINE#         7
+  -------         ENDPROC       _GET_DECTIME
+  -------         PROC          _GET_BCDTIME
+  D:0002H         SYMBOL        time
+  C:109EH         LINE#         9
+  C:10A2H         LINE#         10
+  C:10A2H         LINE#         11
+  C:10CCH         LINE#         12
+  -------         ENDPROC       _GET_BCDTIME
+  -------         PROC          _GET_TIMESTR
+  D:0022H         SYMBOL        tm
+  -------         DO            
+  D:0025H         SYMBOL        timeStr
+  -------         ENDDO         
+  C:0FF5H         LINE#         14
+  C:0FFBH         LINE#         15
+  C:0FFBH         LINE#         18
+  C:102BH         LINE#         20
+  C:1031H         LINE#         21
+  -------         ENDPROC       _GET_TIMESTR
+  -------         PROC          _GET_DATESTR
+  D:0022H         SYMBOL        tm
+  -------         DO            
+  D:0025H         SYMBOL        timeStr
+  -------         ENDDO         
+  C:0FB5H         LINE#         23
+  C:0FBBH         LINE#         24
+  C:0FBBH         LINE#         27
+  C:0FEEH         LINE#         29
+  C:0FF4H         LINE#         30
+  -------         ENDPROC       _GET_DATESTR
+  -------         PROC          PCF2123_INIT
+  C:11B4H         LINE#         8
+  C:11B4H         LINE#         9
+  C:11B4H         LINE#         10
+  -------         ENDPROC       PCF2123_INIT
+  -------         PROC          _PCF2123_SETDATETIME
+  D:0050H         SYMBOL        time
+  C:0E89H         LINE#         13
+  C:0E8FH         LINE#         14
+  C:0E8FH         LINE#         15
+  C:0E91H         LINE#         17
+  C:0E96H         LINE#         18
+  C:0EA2H         LINE#         19
+  C:0EA8H         LINE#         20
+  C:0EAEH         LINE#         21
+  C:0EBAH         LINE#         22
+  C:0EC6H         LINE#         23
+  C:0ED2H         LINE#         24
+  C:0EDEH         LINE#         26
+  C:0EE0H         LINE#         27
+  -------         ENDPROC       _PCF2123_SETDATETIME
+  -------         PROC          _PCF2123_GETDATETIME
+  D:0022H         SYMBOL        time
+  C:0E1FH         LINE#         29
+  C:0E25H         LINE#         30
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  12:53:30  PAGE 7
+
+
+  C:0E25H         LINE#         31
+  C:0E27H         LINE#         33
+  C:0E2CH         LINE#         34
+  C:0E44H         LINE#         35
+  C:0E4AH         LINE#         36
+  C:0E50H         LINE#         37
+  C:0E5CH         LINE#         38
+  C:0E68H         LINE#         39
+  C:0E74H         LINE#         40
+  C:0E86H         LINE#         42
+  C:0E88H         LINE#         43
+  -------         ENDPROC       _PCF2123_GETDATETIME
+  -------         PROC          _MAX7219_INIT
+  D:0022H         SYMBOL        scanSize
+  C:1115H         LINE#         9
+  C:1117H         LINE#         10
+  C:1117H         LINE#         11
+  C:111AH         LINE#         13
+  C:1121H         LINE#         14
+  C:1128H         LINE#         15
+  C:112FH         LINE#         16
+  -------         ENDPROC       _MAX7219_INIT
+  -------         PROC          _MAX7219_WRITE
+  D:0007H         SYMBOL        reg
+  D:0003H         SYMBOL        _data
+  C:117BH         LINE#         19
+  C:117DH         LINE#         20
+  C:117DH         LINE#         21
+  C:117FH         LINE#         23
+  C:1182H         LINE#         24
+  C:1187H         LINE#         26
+  C:1189H         LINE#         27
+  -------         ENDPROC       _MAX7219_WRITE
+  -------         PROC          _MAX7219_DISPLAYNUMBER
+  D:0006H         SYMBOL        number
+  -------         DO            
+  D:0041H         SYMBOL        strNum
+  -------         ENDDO         
+  C:1136H         LINE#         29
+  C:1136H         LINE#         30
+  C:1136H         LINE#         32
+  C:114CH         LINE#         34
+  -------         ENDPROC       _MAX7219_DISPLAYNUMBER
+  -------         PROC          _MAX7219_DISPLAYNUMTEXT
+  D:0022H         SYMBOL        text
+  -------         DO            
+  D:0025H         SYMBOL        pos
+  -------         DO            
+  D:0026H         SYMBOL        i
+  -------         ENDDO         
+  -------         ENDDO         
+  C:0F30H         LINE#         37
+  C:0F36H         LINE#         38
+  C:0F36H         LINE#         41
+  C:0F50H         LINE#         42
+  C:0F50H         LINE#         43
+  C:0F5FH         LINE#         44
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  12:53:30  PAGE 8
+
+
+  C:0F6EH         LINE#         45
+  C:0F72H         LINE#         46
+  -------         ENDPROC       _MAX7219_DISPLAYNUMTEXT
+  -------         PROC          _GETDIGIT
+  D:0007H         SYMBOL        pos
+  D:0005H         SYMBOL        number
+  -------         DO            
+  D:0006H         SYMBOL        digit
+  -------         ENDDO         
+  C:0EE1H         LINE#         48
+  C:0EE1H         LINE#         49
+  C:0EE1H         LINE#         50
+  C:0EE3H         LINE#         52
+  C:0EEFH         LINE#         53
+  C:0EEFH         LINE#         54
+  C:0F03H         LINE#         55
+  C:0F05H         LINE#         57
+  C:0F08H         LINE#         58
+  C:0F08H         LINE#         59
+  C:0F18H         LINE#         60
+  C:0F1AH         LINE#         62
+  C:0F1DH         LINE#         63
+  C:0F1DH         LINE#         64
+  C:0F2DH         LINE#         65
+  C:0F2DH         LINE#         67
+  C:0F2FH         LINE#         68
+  -------         ENDPROC       _GETDIGIT
+  -------         PROC          MAIN
+  C:0F73H         LINE#         11
+  C:0F73H         LINE#         12
+  C:0F73H         LINE#         13
+  C:0F78H         LINE#         14
+  C:0F7BH         LINE#         15
+  C:0F7EH         LINE#         18
+  C:0F7EH         LINE#         19
+  C:0F7EH         LINE#         20
+  C:0F87H         LINE#         22
+  C:0F8AH         LINE#         23
+  C:0F95H         LINE#         25
+  C:0F98H         LINE#         26
+  C:0FAAH         LINE#         28
+  C:0FB3H         LINE#         29
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0B5CH         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?IMUL
+  C:0B89H         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+  -------         MODULE        ?C?SIDIV
+  C:0B9BH         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  12:53:30  PAGE 9
+
+
+  -------         MODULE        ?C?ILDPTR
+  C:0BD1H         PUBLIC        ?C?ILDPTR
+  -------         ENDMOD        ?C?ILDPTR
+
+  -------         MODULE        ?C?ILDOPTR
+  C:0BFCH         PUBLIC        ?C?ILDOPTR
+  -------         ENDMOD        ?C?ILDOPTR
+
+  -------         MODULE        ?C?ISTPTR
+  C:0C34H         PUBLIC        ?C?ISTPTR
+  -------         ENDMOD        ?C?ISTPTR
+
+  -------         MODULE        ?C?ISTOPTR
+  C:0C53H         PUBLIC        ?C?ISTOPTR
+  -------         ENDMOD        ?C?ISTOPTR
+
+  -------         MODULE        PRINTF
+  D:002DH         PUBLIC        ?_PRINTF517?BYTE
+  D:002DH         PUBLIC        ?_PRINTF?BYTE
+  D:002DH         PUBLIC        ?_SPRINTF517?BYTE
+  D:002DH         PUBLIC        ?_SPRINTF?BYTE
+  C:0862H         PUBLIC        _PRINTF
+  C:0862H         PUBLIC        _PRINTF517
+  C:085CH         PUBLIC        _SPRINTF
+  C:085CH         PUBLIC        _SPRINTF517
+  -------         ENDMOD        PRINTF
+
+  -------         MODULE        ?C?STRCPY
+  C:0D4CH         PUBLIC        ?C?STRCPY
+  -------         ENDMOD        ?C?STRCPY
+
+  -------         MODULE        STRLEN
+  C:1155H         PUBLIC        _STRLEN
+  -------         ENDMOD        STRLEN
+
+  -------         MODULE        ?C?CLDPTR
+  C:0D69H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:0D82H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?UIDIV
+  C:0D94H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+  -------         MODULE        ?C?PLDIIDATA
+  C:0DE9H         PUBLIC        ?C?PLDIIDATA
+  -------         ENDMOD        ?C?PLDIIDATA
+
+  -------         MODULE        ?C?CCASE
+  C:0DF9H         PUBLIC        ?C?CCASE
+  -------         ENDMOD        ?C?CCASE
+
+  -------         MODULE        PUTCHAR
+  C:10CDH         PUBLIC        _PUTCHAR
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  12:53:30  PAGE 10
+
+
+  -------         ENDMOD        PUTCHAR
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_PCF2123_SETDATETIME?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_MAX7219_DISPLAYNUMBER?MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0362H BYTE (42%) *
+******************************************************************************
+
+Program Size: data=83.1 xdata=0 code=2493
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
