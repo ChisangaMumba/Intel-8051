@@ -1,0 +1,578 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    07/26/2025  17:44:32  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\main.obj TO .\Objects\8051_ds1620 PRINT (.\Listings\8051_ds
+>> 1620.m51)
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPADD)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FCAST)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (PRINTF)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPROUND)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPCONVERT)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FTNPWR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?SIDIV)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LNEG)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIIDATA)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CCASE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (PUTCHAR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?UIDIV)
+
+
+LINK MAP OF MODULE:  .\Objects\8051_ds1620 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+                    0008H     0018H                  *** GAP ***
+            BIT     0020H.0   0001H.1   UNIT         _BIT_GROUP_
+                    0021H.1   0000H.7                *** GAP ***
+            DATA    0022H     0026H     UNIT         ?DT?MAIN
+            DATA    0048H     001CH     UNIT         _DATA_GROUP_
+            IDATA   0064H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     05EFH     UNIT         ?C?LIB_CODE
+            CODE    0DEFH     046FH     UNIT         ?PR?PRINTF?PRINTF
+            CODE    125EH     0078H     UNIT         ?PR?DS1620_GETTEMPFLOAT?MAIN
+            CODE    12D6H     0072H     UNIT         ?PR?MAIN?MAIN
+            CODE    1348H     0049H     UNIT         ?PR?_THREEWIRE_WRITE?MAIN
+            CODE    1391H     003DH     UNIT         ?PR?_DS1620_WRITECONFIG?MAIN
+            CODE    13CEH     002DH     UNIT         ?PR?THREEWIRE_READ?MAIN
+            CODE    13FBH     002CH     UNIT         ?CO?MAIN
+            CODE    1427H     002BH     UNIT         ?PR?_UART_MSG?MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/26/2025  17:44:32  PAGE 2
+
+
+            CODE    1452H     002AH     UNIT         ?PR?_DS1620_INIT?MAIN
+            CODE    147CH     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
+            CODE    14A3H     001FH     UNIT         ?PR?_DS1620_WRITET_HL?MAIN
+            CODE    14C2H     001EH     UNIT         ?PR?___DELAY_MS?MAIN
+            CODE    14E0H     001BH     UNIT         ?PR?_CALCTEMPR?MAIN
+            CODE    14FBH     0010H     UNIT         ?PR?_DS1620_READ?MAIN
+            CODE    150BH     000CH     UNIT         ?C_C51STARTUP
+            CODE    1517H     000CH     UNIT         ?PR?UART_INIT?MAIN
+            CODE    1523H     000AH     UNIT         ?PR?___DELAY_US?MAIN
+            CODE    152DH     0008H     UNIT         ?PR?_UART_TX?MAIN
+            CODE    1535H     0008H     UNIT         ?PR?UART_RX?MAIN
+            CODE    153DH     0007H     UNIT         ?PR?THREEWIRE_START?MAIN
+            CODE    1544H     0006H     UNIT         ?PR?_DS1620_CONVERT?MAIN
+            CODE    154AH     0006H     UNIT         ?PR?_DS1620_GETTEMP?MAIN
+            CODE    1550H     0003H     UNIT         ?PR?THREEWIRE_STOP?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\8051_ds1620 (?C_STARTUP)
+
+
+SEGMENT                                 BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT                START    LENGTH     START    LENGTH
+------------------------------------------------------------------------
+?C_C51STARTUP                        -----    -----      -----    -----
+  +--> ?PR?MAIN?MAIN
+
+?PR?MAIN?MAIN                        -----    -----      -----    -----
+  +--> ?PR?UART_INIT?MAIN
+  +--> ?PR?_DS1620_INIT?MAIN
+  +--> ?PR?_DS1620_GETTEMP?MAIN
+  +--> ?CO?MAIN
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_UART_MSG?MAIN
+  +--> ?PR?DS1620_GETTEMPFLOAT?MAIN
+  +--> ?PR?___DELAY_MS?MAIN
+
+?PR?_DS1620_INIT?MAIN                -----    -----      0048H    0004H
+  +--> ?PR?_DS1620_WRITECONFIG?MAIN
+  +--> ?PR?_DS1620_WRITET_HL?MAIN
+  +--> ?PR?_DS1620_CONVERT?MAIN
+
+?PR?_DS1620_WRITECONFIG?MAIN         -----    -----      -----    -----
+  +--> ?PR?THREEWIRE_START?MAIN
+  +--> ?PR?_THREEWIRE_WRITE?MAIN
+  +--> ?PR?___DELAY_MS?MAIN
+  +--> ?PR?THREEWIRE_STOP?MAIN
+  +--> ?PR?_DS1620_READ?MAIN
+
+?PR?_THREEWIRE_WRITE?MAIN            -----    -----      -----    -----
+  +--> ?PR?THREEWIRE_START?MAIN
+
+?PR?_DS1620_READ?MAIN                -----    -----      -----    -----
+  +--> ?PR?_THREEWIRE_WRITE?MAIN
+  +--> ?PR?THREEWIRE_READ?MAIN
+  +--> ?PR?THREEWIRE_STOP?MAIN
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/26/2025  17:44:32  PAGE 3
+
+
+?PR?_DS1620_WRITET_HL?MAIN           -----    -----      004CH    0002H
+  +--> ?PR?_THREEWIRE_WRITE?MAIN
+  +--> ?PR?___DELAY_MS?MAIN
+  +--> ?PR?THREEWIRE_STOP?MAIN
+
+?PR?_DS1620_CONVERT?MAIN             -----    -----      -----    -----
+  +--> ?PR?_THREEWIRE_WRITE?MAIN
+  +--> ?PR?THREEWIRE_STOP?MAIN
+
+?PR?_DS1620_GETTEMP?MAIN             -----    -----      -----    -----
+  +--> ?PR?_DS1620_READ?MAIN
+  +--> ?PR?_CALCTEMPR?MAIN
+
+?PR?PRINTF?PRINTF                    0020H.0  0001H.1    0048H    001CH
+  +--> ?PR?PUTCHAR?PUTCHAR
+
+?PR?_UART_MSG?MAIN                   -----    -----      0048H    0003H
+  +--> ?PR?_UART_TX?MAIN
+
+?PR?DS1620_GETTEMPFLOAT?MAIN         -----    -----      0048H    000AH
+  +--> ?PR?_DS1620_READ?MAIN
+  +--> ?PR?_CALCTEMPR?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\8051_ds1620 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:150BH         SEGMENT       ?C_C51STARTUP
+  I:0064H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:150EH         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:150BH         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:150BH         LINE#         133
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/26/2025  17:44:32  PAGE 4
+
+
+  C:150DH         LINE#         134
+  C:150EH         LINE#         135
+  C:150FH         LINE#         136
+  C:1511H         LINE#         185
+  C:1514H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0022H         PUBLIC        tempF
+  D:0026H         PUBLIC        tempH
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  D:0028H         PUBLIC        tempL
+  C:1544H         PUBLIC        _ds1620_convert
+  C:1535H         PUBLIC        uart_rx
+  C:1391H         PUBLIC        _ds1620_writeConfig
+  C:152DH         PUBLIC        _uart_tx
+  D:00A8H         PUBLIC        IE
+  C:14C2H         PUBLIC        ___delay_ms
+  B:00B0H.2       PUBLIC        DQ
+  D:00B8H         PUBLIC        IP
+  C:1523H         PUBLIC        ___delay_us
+  B:0098H.0       PUBLIC        RI
+  B:0098H.1       PUBLIC        TI
+  C:14E0H         PUBLIC        _calcTempr
+  C:14FBH         PUBLIC        _ds1620_read
+  C:12D6H         PUBLIC        main
+  D:0099H         PUBLIC        SBUF
+  C:13CEH         PUBLIC        threeWire_read
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  C:1452H         PUBLIC        _ds1620_init
+  C:1352H         PUBLIC        _threeWire_write
+  C:153DH         PUBLIC        threeWire_start
+  D:008DH         PUBLIC        TH1
+  C:1517H         PUBLIC        uart_init
+  C:125EH         PUBLIC        ds1620_getTempFloat
+  B:0088H.6       PUBLIC        TR1
+  D:002AH         PUBLIC        str
+  B:00B0H.3       PUBLIC        CLK
+  C:154AH         PUBLIC        _ds1620_getTemp
+  C:1550H         PUBLIC        threeWire_stop
+  C:142DH         PUBLIC        _uart_msg
+  D:00C8H         PUBLIC        T2CON
+  B:00B0H.4       PUBLIC        RST
+  C:14A3H         PUBLIC        _ds1620_writeT_HL
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          ___DELAY_MS
+  D:0006H         SYMBOL        d
+  -------         DO            
+  D:0004H         SYMBOL        a
+  -------         ENDDO         
+  C:14C2H         LINE#         4
+  C:14C2H         LINE#         5
+  C:14C2H         LINE#         7
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/26/2025  17:44:32  PAGE 5
+
+
+  C:14CBH         LINE#         8
+  C:14DFH         LINE#         9
+  -------         ENDPROC       ___DELAY_MS
+  -------         PROC          ___DELAY_US
+  D:0007H         SYMBOL        d
+  C:1523H         LINE#         11
+  C:1523H         LINE#         12
+  C:1523H         LINE#         13
+  C:152CH         LINE#         14
+  -------         ENDPROC       ___DELAY_US
+  -------         PROC          UART_INIT
+  C:1517H         LINE#         4
+  C:1517H         LINE#         5
+  C:1517H         LINE#         6
+  C:151AH         LINE#         7
+  C:151DH         LINE#         8
+  C:1520H         LINE#         10
+  C:1522H         LINE#         11
+  -------         ENDPROC       UART_INIT
+  -------         PROC          _UART_TX
+  D:0007H         SYMBOL        data_
+  C:152DH         LINE#         13
+  C:152DH         LINE#         14
+  C:152DH         LINE#         15
+  C:152FH         LINE#         16
+  C:1532H         LINE#         17
+  C:1534H         LINE#         18
+  -------         ENDPROC       _UART_TX
+  -------         PROC          UART_RX
+  -------         DO            
+  D:0007H         SYMBOL        chr
+  -------         ENDDO         
+  C:1535H         LINE#         20
+  C:1535H         LINE#         21
+  C:1535H         LINE#         24
+  C:1538H         LINE#         25
+  C:153AH         LINE#         26
+  C:153CH         LINE#         28
+  C:153CH         LINE#         29
+  -------         ENDPROC       UART_RX
+  -------         PROC          L?0061
+  -------         ENDPROC       L?0061
+  -------         PROC          _UART_MSG
+  D:0048H         SYMBOL        chr
+  C:142DH         LINE#         31
+  C:1433H         LINE#         32
+  C:1433H         LINE#         33
+  C:143EH         LINE#         34
+  C:143EH         LINE#         35
+  C:144FH         LINE#         36
+  C:1451H         LINE#         37
+  -------         ENDPROC       _UART_MSG
+  -------         PROC          THREEWIRE_START
+  C:153DH         LINE#         18
+  C:153DH         LINE#         19
+  C:153DH         LINE#         20
+  C:153FH         LINE#         21
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/26/2025  17:44:32  PAGE 6
+
+
+  C:1541H         LINE#         22
+  C:1543H         LINE#         23
+  -------         ENDPROC       THREEWIRE_START
+  -------         PROC          THREEWIRE_STOP
+  C:1550H         LINE#         25
+  C:1550H         LINE#         26
+  C:1550H         LINE#         27
+  C:1552H         LINE#         28
+  -------         ENDPROC       THREEWIRE_STOP
+  C:1348H         SYMBOL        L?0060
+  -------         PROC          L?0059
+  -------         ENDPROC       L?0059
+  C:1348H         SYMBOL        L?0060
+  -------         PROC          _THREEWIRE_WRITE
+  D:0002H         SYMBOL        data_
+  D:0005H         SYMBOL        sz
+  -------         DO            
+  D:0082H         SYMBOL        tx
+  -------         ENDDO         
+  C:1352H         LINE#         30
+  C:1356H         LINE#         31
+  C:1356H         LINE#         33
+  C:136EH         LINE#         34
+  C:136EH         LINE#         35
+  C:1370H         LINE#         36
+  C:138BH         LINE#         37
+  C:138DH         LINE#         38
+  C:1390H         LINE#         39
+  -------         ENDPROC       _THREEWIRE_WRITE
+  -------         PROC          THREEWIRE_READ
+  -------         DO            
+  D:0003H         SYMBOL        rx
+  D:0004H         SYMBOL        data_
+  -------         ENDDO         
+  C:13CEH         LINE#         41
+  C:13CEH         LINE#         42
+  C:13CEH         LINE#         44
+  C:13D1H         LINE#         46
+  C:13D3H         LINE#         48
+  C:13D4H         LINE#         49
+  C:13D4H         LINE#         50
+  C:13D6H         LINE#         51
+  C:13EEH         LINE#         52
+  C:13F0H         LINE#         53
+  C:13F4H         LINE#         55
+  C:13F6H         LINE#         57
+  C:13FAH         LINE#         58
+  -------         ENDPROC       THREEWIRE_READ
+  -------         PROC          _DS1620_INIT
+  D:0048H         SYMBOL        tempH
+  D:004AH         SYMBOL        tempL
+  C:1452H         LINE#         6
+  C:145AH         LINE#         7
+  C:145AH         LINE#         8
+  C:145CH         LINE#         9
+  C:145EH         LINE#         10
+  C:1460H         LINE#         12
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/26/2025  17:44:32  PAGE 7
+
+
+  C:1465H         LINE#         15
+  C:146EH         LINE#         16
+  C:1477H         LINE#         18
+  -------         ENDPROC       _DS1620_INIT
+  -------         PROC          _DS1620_CONVERT
+  D:0007H         SYMBOL        command
+  C:1544H         LINE#         21
+  C:1544H         LINE#         22
+  C:1544H         LINE#         23
+  C:1544H         LINE#         24
+  C:1547H         LINE#         25
+  -------         ENDPROC       _DS1620_CONVERT
+  -------         PROC          _DS1620_READ
+  D:0007H         SYMBOL        command
+  -------         DO            
+  D:0004H         SYMBOL        data_
+  -------         ENDDO         
+  C:14FBH         LINE#         28
+  C:14FBH         LINE#         29
+  C:14FBH         LINE#         30
+  C:14FEH         LINE#         32
+  C:14FEH         LINE#         33
+  C:1501H         LINE#         34
+  C:1508H         LINE#         35
+  -------         ENDPROC       _DS1620_READ
+  -------         PROC          _DS1620_WRITET_HL
+  D:0007H         SYMBOL        command
+  D:004CH         SYMBOL        data_
+  C:14A3H         LINE#         40
+  C:14A7H         LINE#         41
+  C:14A7H         LINE#         42
+  C:14A7H         LINE#         44
+  C:14AAH         LINE#         45
+  C:14B8H         LINE#         46
+  C:14BFH         LINE#         48
+  -------         ENDPROC       _DS1620_WRITET_HL
+  -------         PROC          _DS1620_WRITECONFIG
+  D:0001H         SYMBOL        data_
+  C:1391H         LINE#         51
+  C:1393H         LINE#         52
+  C:1393H         LINE#         53
+  C:1399H         LINE#         54
+  C:1399H         LINE#         55
+  C:139CH         LINE#         56
+  C:13A5H         LINE#         57
+  C:13ACH         LINE#         58
+  C:13B3H         LINE#         59
+  C:13B6H         LINE#         61
+  C:13C5H         LINE#         62
+  C:13C5H         LINE#         63
+  C:13C8H         LINE#         64
+  C:13C8H         LINE#         66
+  C:13C8H         LINE#         67
+  C:13CBH         LINE#         68
+  C:13CBH         LINE#         69
+  C:13CBH         LINE#         71
+  C:13CDH         LINE#         72
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/26/2025  17:44:32  PAGE 8
+
+
+  -------         ENDPROC       _DS1620_WRITECONFIG
+  -------         PROC          DS1620_GETTEMPFLOAT
+  -------         DO            
+  D:0048H         SYMBOL        temp_read
+  D:004AH         SYMBOL        count_per_c
+  D:004CH         SYMBOL        count_remain
+  D:004EH         SYMBOL        tempr
+  -------         ENDDO         
+  C:125EH         LINE#         76
+  C:125EH         LINE#         77
+  C:125EH         LINE#         81
+  C:1267H         LINE#         82
+  C:1270H         LINE#         83
+  C:1279H         LINE#         85
+  C:127FH         LINE#         86
+  C:12CDH         LINE#         88
+  C:12D5H         LINE#         89
+  -------         ENDPROC       DS1620_GETTEMPFLOAT
+  -------         PROC          _DS1620_GETTEMP
+  D:0007H         SYMBOL        command
+  -------         DO            
+  D:0006H         SYMBOL        rawData
+  -------         ENDDO         
+  C:154AH         LINE#         91
+  C:154AH         LINE#         92
+  C:154AH         LINE#         93
+  C:154DH         LINE#         95
+  -------         ENDPROC       _DS1620_GETTEMP
+  -------         PROC          _CALCTEMPR
+  D:0004H         SYMBOL        tempr
+  -------         DO            
+  D:0006H         SYMBOL        num
+  -------         ENDDO         
+  C:14E0H         LINE#         98
+  C:14E4H         LINE#         99
+  C:14E4H         LINE#         100
+  C:14ECH         LINE#         102
+  C:14F0H         LINE#         103
+  C:14F0H         LINE#         104
+  C:14FAH         LINE#         105
+  C:14FAH         LINE#         107
+  C:14FAH         LINE#         108
+  -------         ENDPROC       _CALCTEMPR
+  -------         PROC          MAIN
+  C:12D6H         LINE#         12
+  C:12D6H         LINE#         13
+  C:12D6H         LINE#         14
+  C:12D9H         LINE#         15
+  C:12E4H         LINE#         17
+  C:12EDH         LINE#         18
+  C:12F6H         LINE#         20
+  C:1314H         LINE#         21
+  C:1317H         LINE#         23
+  C:1317H         LINE#         24
+  C:1317H         LINE#         25
+  C:1322H         LINE#         27
+  C:133CH         LINE#         28
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/26/2025  17:44:32  PAGE 9
+
+
+  C:133FH         LINE#         30
+  C:1346H         LINE#         31
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?FPADD
+  C:0807H         PUBLIC        ?C?FPADD
+  C:0803H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+  -------         MODULE        ?C?FCAST
+  C:0902H         PUBLIC        ?C?FCASTC
+  C:08FDH         PUBLIC        ?C?FCASTI
+  C:08F8H         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        PRINTF
+  D:0048H         PUBLIC        ?_PRINTF?BYTE
+  D:0048H         PUBLIC        ?_SPRINTF?BYTE
+  C:0E51H         PUBLIC        _PRINTF
+  C:0E4BH         PUBLIC        _SPRINTF
+  -------         ENDMOD        PRINTF
+
+  -------         MODULE        ?C?FPROUND
+  C:0980H         PUBLIC        ?C?FPROUND
+  -------         ENDMOD        ?C?FPROUND
+
+  -------         MODULE        ?C?FPCONVERT
+  C:09AFH         PUBLIC        ?C?FPCONVERT
+  -------         ENDMOD        ?C?FPCONVERT
+
+  -------         MODULE        ?C?FPMUL
+  C:0AB2H         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FPDIV
+  C:0BBBH         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?FTNPWR
+  C:0C88H         PUBLIC        ?C?FTNPWR
+  -------         ENDMOD        ?C?FTNPWR
+
+  -------         MODULE        ?C?CLDPTR
+  C:0CC8H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0CE1H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:0D0EH         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?SIDIV
+  C:0D20H         PUBLIC        ?C?SIDIV
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  07/26/2025  17:44:32  PAGE 10
+
+
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        ?C?LNEG
+  C:0D56H         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+  -------         MODULE        ?C?PLDIIDATA
+  C:0D64H         PUBLIC        ?C?PLDIIDATA
+  -------         ENDMOD        ?C?PLDIIDATA
+
+  -------         MODULE        ?C?CCASE
+  C:0D74H         PUBLIC        ?C?CCASE
+  -------         ENDMOD        ?C?CCASE
+
+  -------         MODULE        PUTCHAR
+  C:147CH         PUBLIC        _PUTCHAR
+  -------         ENDMOD        PUTCHAR
+
+  -------         MODULE        ?C?UIDIV
+  C:0D9AH         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?___DELAY_US?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?UART_RX?MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 02D1H BYTE (35%) *
+******************************************************************************
+
+Program Size: data=76.1 xdata=0 code=3414
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
