@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\Lcd4" 
+PRINT(".\Listings\Lcd4.m51")
