@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\8051_max7219_dotMatrix" 
+PRINT(".\Listings\8051_max7219_dotMatrix.m51")
