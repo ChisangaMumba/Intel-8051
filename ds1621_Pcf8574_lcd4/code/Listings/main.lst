@@ -1,0 +1,49 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              01/16/2025 11:27:33 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include <stdio.h>
+   3          #include <stdlib.h>
+   4          #include <./assets/ds1621/ds1621.h>
+   5          #include "assets/lcd/LCD_Serial.h"
+   6          //------------------------------------------------------------------------------
+   7          unsigned char addr = 0x90; // Temperature sensor device Address
+   8          float tempr;
+   9          char out[30];
+  10          //------------------------------------------------------------------------------
+  11          int main() 
+  12          {
+  13   1        LCD_init(0x4E);       // Expander Address  
+  14   1        ds1621_init(addr);    
+  15   1        LCD_string(0,5,"DS1621");
+  16   1        
+  17   1        while(1)
+  18   1        {
+  19   2          tempr = ds1621_read2ByteReg(addr, TEMP_REG);
+  20   2          
+  21   2          sprintf(out,"Tempr: %3.2f%cC",toFloat(tempr), DEG_SYMBOL);
+  22   2          LCD_string(1,0,out);  
+  23   2        }
+  24   1      }
+  25          //------------------------------------------------------------------------------
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    585    ----
+   CONSTANT SIZE    =     23    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     40      13
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
