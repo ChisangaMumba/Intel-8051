@@ -1,0 +1,719 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    01/14/2025  17:13:16  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\main.obj TO .\Objects\8051_ds3234_tm1637 PRINT (.\Listings\
+>> 8051_ds3234_tm1637.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?IMUL)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?SIDIV)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?ILDPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?ILDOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?ISTOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (PRINTF)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?STRCPY)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?UIDIV)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIIDATA)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CCASE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (PUTCHAR)
+
+
+LINK MAP OF MODULE:  .\Objects\8051_ds3234_tm1637 (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     000AH     UNIT         ?DT?_TM1637_DISPLAYNUM?MAIN
+            DATA    0012H     0005H     UNIT         ?DT?_DS3234_SETTIME?MAIN
+                    0017H     0009H                  *** GAP ***
+            BIT     0020H.0   0001H.1   UNIT         _BIT_GROUP_
+                    0021H.1   0000H.7                *** GAP ***
+            DATA    0022H     0026H     UNIT         ?DT?MAIN
+            DATA    0048H     001FH     UNIT         _DATA_GROUP_
+            IDATA   0067H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     07FAH                  *** GAP ***
+            CODE    0800H     035CH     UNIT         ?PR?PRINTF?PRINTF
+            CODE    0B5CH     02A4H     UNIT         ?C?LIB_CODE
+            CODE    0E00H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0E8CH     0067H     UNIT         ?PR?_GETDIGIT?MAIN
+            CODE    0EF3H     0049H     UNIT         ?PR?MAIN?MAIN
+            CODE    0F3CH     0045H     UNIT         ?PR?_DS3234_SETTIME?MAIN
+            CODE    0F81H     0043H     UNIT         ?PR?_DS3234_GETTIME?MAIN
+            CODE    0FC4H     0040H     UNIT         ?PR?_GET_DATESTR?MAIN
+            CODE    1004H     003DH     UNIT         ?PR?_GET_TIMESTR?MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  17:13:16  PAGE 2
+
+
+            CODE    1041H     0039H     UNIT         ?PR?_TM1637_WRITE?MAIN
+            CODE    107AH     0032H     UNIT         ?PR?_DS3234_WRITE?MAIN
+            CODE    10ACH     002FH     UNIT         ?PR?_GET_BCDTIME?MAIN
+            CODE    10DBH     0029H     UNIT         ?PR?_SPI_WRITE?MAIN
+            CODE    1104H     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
+            CODE    112BH     0026H     UNIT         ?PR?_TWOWIRE_WRITE?MAIN
+            CODE    1151H     0021H     UNIT         ?PR?SPI_READ?MAIN
+            CODE    1172H     0020H     UNIT         ?PR?_GET_DECTIME?MAIN
+            CODE    1192H     001FH     UNIT         ?PR?_TM1637_DISPLAYNUM?MAIN
+            CODE    11B1H     001EH     UNIT         ?PR?___DELAY_MS?MAIN
+            CODE    11CFH     001BH     UNIT         ?PR?DS3234_INIT?MAIN
+            CODE    11EAH     0014H     UNIT         ?PR?_TM1637_DISPLAYNUMTEXT?MAIN
+            CODE    11FEH     0013H     UNIT         ?PR?_DS3234_READ?MAIN
+            CODE    1211H     0011H     UNIT         ?PR?___DELAY_US?MAIN
+            CODE    1222H     0011H     UNIT         ?PR?TWOWIRE_STOP?MAIN
+            CODE    1233H     0011H     UNIT         ?CO?MAIN
+            CODE    1244H     000DH     UNIT         ?PR?_TM1637_INITSEND?MAIN
+            CODE    1251H     000DH     UNIT         ?C_INITSEG
+            CODE    125EH     000CH     UNIT         ?PR?EXTINT0_ISR?MAIN
+            CODE    126AH     000CH     UNIT         ?PR?TWOWIRE_START?MAIN
+            CODE    1276H     000BH     UNIT         ?PR?EXTINT0_INIT?MAIN
+            CODE    1281H     000AH     UNIT         ?PR?TWOWIRE_ACK?MAIN
+            CODE    128BH     0007H     UNIT         ?PR?SPI_INIT?MAIN
+            CODE    1292H     0007H     UNIT         ?PR?_TM1637_SETBRIGHTNESS?MAIN
+            CODE    1299H     0006H     UNIT         ?PR?_TM1637_INIT?MAIN
+            CODE    129FH     0006H     UNIT         ?PR?_TM1637_COMMAND?MAIN
+            CODE    12A5H     0005H     UNIT         ?PR?TWOWIRE_INIT?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\8051_ds3234_tm1637 (?C_STARTUP)
+
+
+SEGMENT                                    BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT                   START    LENGTH     START    LENGTH
+---------------------------------------------------------------------------
+?C_C51STARTUP                           -----    -----      -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                           -----    -----      -----    -----
+  +--> ?PR?_TM1637_INIT?MAIN
+  +--> ?PR?EXTINT0_INIT?MAIN
+  +--> ?PR?DS3234_INIT?MAIN
+  +--> ?PR?_DS3234_GETTIME?MAIN
+  +--> ?PR?_GET_TIMESTR?MAIN
+  +--> ?PR?_GET_DATESTR?MAIN
+  +--> ?PR?_TM1637_DISPLAYNUMTEXT?MAIN
+  +--> ?PR?___DELAY_MS?MAIN
+
+?PR?_TM1637_INIT?MAIN                   -----    -----      -----    -----
+  +--> ?PR?TWOWIRE_INIT?MAIN
+  +--> ?PR?_TM1637_SETBRIGHTNESS?MAIN
+
+?PR?_TM1637_SETBRIGHTNESS?MAIN          -----    -----      -----    -----
+  +--> ?PR?_TM1637_COMMAND?MAIN
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  17:13:16  PAGE 3
+
+
+?PR?_TM1637_COMMAND?MAIN                -----    -----      -----    -----
+  +--> ?PR?_TM1637_INITSEND?MAIN
+  +--> ?PR?TWOWIRE_STOP?MAIN
+
+?PR?_TM1637_INITSEND?MAIN               -----    -----      -----    -----
+  +--> ?PR?TWOWIRE_START?MAIN
+  +--> ?PR?_TWOWIRE_WRITE?MAIN
+  +--> ?PR?TWOWIRE_ACK?MAIN
+
+?PR?TWOWIRE_START?MAIN                  -----    -----      -----    -----
+  +--> ?PR?___DELAY_US?MAIN
+
+?PR?_TWOWIRE_WRITE?MAIN                 -----    -----      -----    -----
+  +--> ?PR?___DELAY_US?MAIN
+
+?PR?TWOWIRE_ACK?MAIN                    -----    -----      -----    -----
+  +--> ?PR?___DELAY_US?MAIN
+
+?PR?TWOWIRE_STOP?MAIN                   -----    -----      -----    -----
+  +--> ?PR?___DELAY_US?MAIN
+
+?PR?DS3234_INIT?MAIN                    -----    -----      -----    -----
+  +--> ?PR?SPI_INIT?MAIN
+  +--> ?PR?_DS3234_WRITE?MAIN
+
+?PR?_DS3234_WRITE?MAIN                  -----    -----      0048H    0004H
+  +--> ?PR?_SPI_WRITE?MAIN
+
+?PR?_DS3234_GETTIME?MAIN                -----    -----      0048H    0005H
+  +--> ?PR?_DS3234_READ?MAIN
+  +--> ?PR?_GET_DECTIME?MAIN
+
+?PR?_DS3234_READ?MAIN                   -----    -----      -----    -----
+  +--> ?PR?_SPI_WRITE?MAIN
+  +--> ?PR?SPI_READ?MAIN
+
+?PR?_GET_TIMESTR?MAIN                   -----    -----      0048H    000BH
+  +--> ?CO?MAIN
+  +--> ?PR?PRINTF?PRINTF
+
+?PR?PRINTF?PRINTF                       0020H.0  0001H.1    0053H    0014H
+  +--> ?PR?PUTCHAR?PUTCHAR
+
+?PR?_GET_DATESTR?MAIN                   -----    -----      0048H    000BH
+  +--> ?CO?MAIN
+  +--> ?PR?PRINTF?PRINTF
+
+?PR?_TM1637_DISPLAYNUMTEXT?MAIN         -----    -----      0048H    0003H
+  +--> ?PR?_TM1637_COMMAND?MAIN
+  +--> ?PR?_TM1637_WRITE?MAIN
+
+?PR?_TM1637_WRITE?MAIN                  -----    -----      004BH    0004H
+  +--> ?PR?_TM1637_INITSEND?MAIN
+  +--> ?PR?_GETDIGIT?MAIN
+  +--> ?PR?_TWOWIRE_WRITE?MAIN
+  +--> ?PR?TWOWIRE_ACK?MAIN
+  +--> ?PR?TWOWIRE_STOP?MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  17:13:16  PAGE 4
+
+
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\8051_ds3234_tm1637 (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0E00H         SEGMENT       ?C_C51STARTUP
+  I:0067H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0E03H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0E00H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0E00H         LINE#         133
+  C:0E02H         LINE#         134
+  C:0E03H         LINE#         135
+  C:0E04H         LINE#         136
+  C:0E06H         LINE#         185
+  C:0E09H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  C:1192H         PUBLIC        _TM1637_displayNum
+  C:1041H         PUBLIC        _TM1637_write
+  D:00B0H         PUBLIC        P3
+  C:128BH         PUBLIC        SPI_init
+  C:112BH         PUBLIC        _twoWire_write
+  B:0090H.6       PUBLIC        LED0
+  B:00A8H.7       PUBLIC        EA
+  C:1281H         PUBLIC        twoWire_ack
+  B:0090H.7       PUBLIC        LED1
+  D:0022H         PUBLIC        digits
+  C:126AH         PUBLIC        twoWire_start
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  17:13:16  PAGE 5
+
+
+  C:1299H         PUBLIC        _TM1637_init
+  C:12A5H         PUBLIC        twoWire_init
+  D:00A8H         PUBLIC        IE
+  B:0090H.0       PUBLIC        SDOUT
+  C:11B1H         PUBLIC        ___delay_ms
+  B:0090H.3       PUBLIC        CS
+  C:1244H         PUBLIC        _TM1637_initSend
+  C:0F81H         PUBLIC        _DS3234_getTime
+  D:00B8H         PUBLIC        IP
+  C:1218H         PUBLIC        ___delay_us
+  C:1222H         PUBLIC        twoWire_stop
+  C:0F3CH         PUBLIC        _DS3234_setTime
+  C:0EF3H         PUBLIC        main
+  C:1276H         PUBLIC        ExtInt0_init
+  C:11EAH         PUBLIC        _TM1637_displayNumText
+  B:0090H.2       PUBLIC        SCLK
+  B:0090H.1       PUBLIC        SDIN
+  D:002CH         PUBLIC        time
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:0E8CH         PUBLIC        _getDigit
+  C:129FH         PUBLIC        _TM1637_command
+  C:125EH         PUBLIC        ExtInt0_isr
+  C:1172H         PUBLIC        _get_DecTime
+  C:1292H         PUBLIC        _TM1637_setBrightness
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  B:0080H.1       PUBLIC        SDA
+  D:003CH         PUBLIC        str
+  C:0FC4H         PUBLIC        _get_DateStr
+  B:0080H.0       PUBLIC        SCK
+  C:11FEH         PUBLIC        _DS3234_read
+  D:00C8H         PUBLIC        T2CON
+  C:1151H         PUBLIC        SPI_read
+  C:1004H         PUBLIC        _get_TimeStr
+  C:107AH         PUBLIC        _DS3234_write
+  D:00D0H         PUBLIC        PSW
+  C:11CFH         PUBLIC        DS3234_init
+  C:10DBH         PUBLIC        _SPI_write
+  C:10ACH         PUBLIC        _get_BCDTime
+  -------         PROC          EXTINT0_INIT
+  C:1276H         LINE#         7
+  C:1276H         LINE#         8
+  C:1276H         LINE#         9
+  C:1278H         LINE#         10
+  C:127AH         LINE#         11
+  C:127CH         LINE#         13
+  C:127EH         LINE#         14
+  C:1280H         LINE#         15
+  -------         ENDPROC       EXTINT0_INIT
+  -------         PROC          EXTINT0_ISR
+  C:125EH         LINE#         18
+  C:1260H         LINE#         20
+  C:1262H         LINE#         21
+  C:1267H         LINE#         22
+  -------         ENDPROC       EXTINT0_ISR
+  -------         PROC          SPI_INIT
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  17:13:16  PAGE 6
+
+
+  C:128BH         LINE#         6
+  C:128BH         LINE#         7
+  C:128BH         LINE#         8
+  C:128DH         LINE#         9
+  C:128FH         LINE#         10
+  C:1291H         LINE#         11
+  -------         ENDPROC       SPI_INIT
+  -------         PROC          _SPI_WRITE
+  D:0005H         SYMBOL        send
+  -------         DO            
+  D:0004H         SYMBOL        tx
+  -------         ENDDO         
+  C:10DBH         LINE#         13
+  C:10DDH         LINE#         14
+  C:10DDH         LINE#         16
+  C:10DFH         LINE#         17
+  C:10DFH         LINE#         18
+  C:10E1H         LINE#         19
+  C:10FDH         LINE#         20
+  C:10FFH         LINE#         21
+  C:1103H         LINE#         22
+  -------         ENDPROC       _SPI_WRITE
+  -------         PROC          SPI_READ
+  -------         DO            
+  D:0006H         SYMBOL        Rx
+  D:0005H         SYMBOL        bitVal
+  D:0007H         SYMBOL        _data
+  -------         ENDDO         
+  C:1151H         LINE#         24
+  C:1151H         LINE#         25
+  C:1151H         LINE#         26
+  C:1153H         LINE#         27
+  C:1154H         LINE#         28
+  C:1154H         LINE#         29
+  C:1156H         LINE#         30
+  C:115BH         LINE#         31
+  C:116BH         LINE#         32
+  C:116DH         LINE#         33
+  C:1171H         LINE#         35
+  C:1171H         LINE#         36
+  -------         ENDPROC       SPI_READ
+  -------         PROC          _GET_DECTIME
+  D:0002H         SYMBOL        time
+  C:1172H         LINE#         4
+  C:1176H         LINE#         5
+  C:1176H         LINE#         6
+  C:1191H         LINE#         7
+  -------         ENDPROC       _GET_DECTIME
+  -------         PROC          _GET_BCDTIME
+  D:0002H         SYMBOL        time
+  C:10ACH         LINE#         9
+  C:10B0H         LINE#         10
+  C:10B0H         LINE#         11
+  C:10DAH         LINE#         12
+  -------         ENDPROC       _GET_BCDTIME
+  -------         PROC          _GET_TIMESTR
+  D:0048H         SYMBOL        tm
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  17:13:16  PAGE 7
+
+
+  -------         DO            
+  D:004BH         SYMBOL        timeStr
+  -------         ENDDO         
+  C:1004H         LINE#         14
+  C:100AH         LINE#         15
+  C:100AH         LINE#         18
+  C:103AH         LINE#         20
+  C:1040H         LINE#         21
+  -------         ENDPROC       _GET_TIMESTR
+  -------         PROC          _GET_DATESTR
+  D:0048H         SYMBOL        tm
+  -------         DO            
+  D:004BH         SYMBOL        timeStr
+  -------         ENDDO         
+  C:0FC4H         LINE#         23
+  C:0FCAH         LINE#         24
+  C:0FCAH         LINE#         27
+  C:0FFDH         LINE#         29
+  C:1003H         LINE#         30
+  -------         ENDPROC       _GET_DATESTR
+  -------         PROC          DS3234_INIT
+  C:11CFH         LINE#         8
+  C:11CFH         LINE#         9
+  C:11CFH         LINE#         10
+  C:11D2H         LINE#         11
+  C:11D4H         LINE#         13
+  C:11DFH         LINE#         14
+  -------         ENDPROC       DS3234_INIT
+  -------         PROC          _DS3234_READ
+  D:0006H         SYMBOL        address
+  -------         DO            
+  D:0004H         SYMBOL        value
+  -------         ENDDO         
+  C:11FEH         LINE#         17
+  C:11FEH         LINE#         18
+  C:11FEH         LINE#         19
+  C:1201H         LINE#         21
+  C:1203H         LINE#         22
+  C:1206H         LINE#         23
+  C:120DH         LINE#         24
+  C:120FH         LINE#         26
+  C:1210H         LINE#         27
+  -------         ENDPROC       _DS3234_READ
+  -------         PROC          _DS3234_WRITE
+  D:0082H         SYMBOL        address
+  D:0002H         SYMBOL        value
+  -------         DO            
+  D:0048H         SYMBOL        temp
+  -------         ENDDO         
+  C:107AH         LINE#         29
+  C:1082H         LINE#         30
+  C:1082H         LINE#         31
+  C:108BH         LINE#         33
+  C:108DH         LINE#         34
+  C:10A1H         LINE#         35
+  C:10A4H         LINE#         36
+  C:10A9H         LINE#         37
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  17:13:16  PAGE 8
+
+
+  C:10ABH         LINE#         38
+  -------         ENDPROC       _DS3234_WRITE
+  -------         PROC          _DS3234_SETTIME
+  D:0012H         SYMBOL        time
+  -------         DO            
+  D:0015H         SYMBOL        reg
+  -------         ENDDO         
+  C:0F3CH         LINE#         40
+  C:0F42H         LINE#         41
+  C:0F42H         LINE#         44
+  C:0F47H         LINE#         45
+  C:0F47H         LINE#         46
+  C:0F6DH         LINE#         47
+  C:0F80H         LINE#         48
+  -------         ENDPROC       _DS3234_SETTIME
+  -------         PROC          _DS3234_GETTIME
+  D:0048H         SYMBOL        time
+  -------         DO            
+  D:004BH         SYMBOL        reg
+  -------         ENDDO         
+  C:0F81H         LINE#         50
+  C:0F87H         LINE#         51
+  C:0F87H         LINE#         54
+  C:0F8CH         LINE#         55
+  C:0F8CH         LINE#         56
+  C:0FB0H         LINE#         57
+  C:0FC3H         LINE#         58
+  -------         ENDPROC       _DS3234_GETTIME
+  -------         PROC          ___DELAY_MS
+  D:0006H         SYMBOL        d
+  -------         DO            
+  D:0004H         SYMBOL        a
+  -------         ENDDO         
+  C:11B1H         LINE#         4
+  C:11B1H         LINE#         5
+  C:11B1H         LINE#         7
+  C:11BAH         LINE#         8
+  C:11CEH         LINE#         9
+  -------         ENDPROC       ___DELAY_MS
+  -------         PROC          L?0093
+  -------         ENDPROC       L?0093
+  -------         PROC          ___DELAY_US
+  D:0007H         SYMBOL        d
+  C:1218H         LINE#         11
+  C:1218H         LINE#         12
+  C:1218H         LINE#         13
+  C:1221H         LINE#         14
+  -------         ENDPROC       ___DELAY_US
+  -------         PROC          TWOWIRE_INIT
+  C:12A5H         LINE#         10
+  C:12A5H         LINE#         11
+  C:12A5H         LINE#         12
+  C:12A7H         LINE#         13
+  C:12A9H         LINE#         14
+  -------         ENDPROC       TWOWIRE_INIT
+  -------         PROC          TWOWIRE_START
+  C:126AH         LINE#         16
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  17:13:16  PAGE 9
+
+
+  C:126AH         LINE#         17
+  C:126AH         LINE#         18
+  C:126CH         LINE#         19
+  C:126EH         LINE#         20
+  C:1273H         LINE#         21
+  C:1275H         LINE#         22
+  -------         ENDPROC       TWOWIRE_START
+  -------         PROC          TWOWIRE_STOP
+  C:1222H         LINE#         24
+  C:1222H         LINE#         25
+  C:1222H         LINE#         26
+  C:1224H         LINE#         27
+  C:1229H         LINE#         28
+  C:122BH         LINE#         29
+  C:122DH         LINE#         30
+  C:122DH         LINE#         31
+  C:1230H         LINE#         32
+  C:1232H         LINE#         33
+  -------         ENDPROC       TWOWIRE_STOP
+  -------         PROC          TWOWIRE_ACK
+  C:1281H         LINE#         35
+  C:1281H         LINE#         36
+  C:1281H         LINE#         37
+  C:1283H         LINE#         38
+  C:1285H         LINE#         39
+  C:1285H         LINE#         40
+  C:1288H         LINE#         41
+  C:128AH         LINE#         42
+  -------         ENDPROC       TWOWIRE_ACK
+  -------         PROC          _TWOWIRE_WRITE
+  D:0006H         SYMBOL        _data
+  -------         DO            
+  D:0005H         SYMBOL        tx
+  -------         ENDDO         
+  C:112BH         LINE#         44
+  C:112DH         LINE#         45
+  C:112DH         LINE#         48
+  C:112FH         LINE#         49
+  C:112FH         LINE#         50
+  C:1131H         LINE#         51
+  C:1145H         LINE#         52
+  C:1147H         LINE#         54
+  C:114CH         LINE#         55
+  C:1150H         LINE#         56
+  -------         ENDPROC       _TWOWIRE_WRITE
+  -------         PROC          _TM1637_INIT
+  D:0007H         SYMBOL        level
+  C:1299H         LINE#         11
+  C:1299H         LINE#         12
+  C:1299H         LINE#         13
+  C:129CH         LINE#         14
+  -------         ENDPROC       _TM1637_INIT
+  -------         PROC          _TM1637_DISPLAYNUM
+  D:0006H         SYMBOL        number
+  -------         DO            
+  D:0008H         SYMBOL        strNum
+  -------         ENDDO         
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  17:13:16  PAGE 10
+
+
+  C:1192H         LINE#         17
+  C:1192H         LINE#         18
+  C:1192H         LINE#         20
+  C:11A8H         LINE#         24
+  -------         ENDPROC       _TM1637_DISPLAYNUM
+  -------         PROC          _TM1637_DISPLAYNUMTEXT
+  D:0048H         SYMBOL        text
+  C:11EAH         LINE#         27
+  C:11F0H         LINE#         28
+  C:11F0H         LINE#         29
+  C:11F5H         LINE#         30
+  -------         ENDPROC       _TM1637_DISPLAYNUMTEXT
+  -------         PROC          _TM1637_SETBRIGHTNESS
+  D:0007H         SYMBOL        level
+  C:1292H         LINE#         33
+  C:1292H         LINE#         34
+  C:1292H         LINE#         35
+  -------         ENDPROC       _TM1637_SETBRIGHTNESS
+  -------         PROC          _TM1637_WRITE
+  D:004BH         SYMBOL        text
+  -------         DO            
+  D:004EH         SYMBOL        pos
+  -------         ENDDO         
+  C:1041H         LINE#         38
+  C:1047H         LINE#         39
+  C:1047H         LINE#         40
+  C:104AH         LINE#         41
+  C:104FH         LINE#         43
+  C:105AH         LINE#         44
+  C:105AH         LINE#         45
+  C:1072H         LINE#         46
+  C:1075H         LINE#         47
+  C:1077H         LINE#         49
+  -------         ENDPROC       _TM1637_WRITE
+  -------         PROC          _TM1637_COMMAND
+  D:0007H         SYMBOL        command
+  C:129FH         LINE#         52
+  C:129FH         LINE#         53
+  C:129FH         LINE#         54
+  C:12A2H         LINE#         55
+  -------         ENDPROC       _TM1637_COMMAND
+  -------         PROC          _TM1637_INITSEND
+  D:0006H         SYMBOL        command
+  C:1244H         LINE#         58
+  C:1246H         LINE#         59
+  C:1246H         LINE#         60
+  C:1249H         LINE#         61
+  C:124EH         LINE#         62
+  -------         ENDPROC       _TM1637_INITSEND
+  -------         PROC          _GETDIGIT
+  D:0007H         SYMBOL        pos
+  D:0005H         SYMBOL        asciiChar
+  -------         DO            
+  D:0004H         SYMBOL        i
+  D:0006H         SYMBOL        digit
+  -------         ENDDO         
+  C:0E8CH         LINE#         65
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  17:13:16  PAGE 11
+
+
+  C:0E8CH         LINE#         66
+  C:0E8CH         LINE#         67
+  C:0E8EH         LINE#         69
+  C:0E9AH         LINE#         70
+  C:0E9AH         LINE#         71
+  C:0E9EH         LINE#         72
+  C:0EBAH         LINE#         73
+  C:0EBCH         LINE#         75
+  C:0EC1H         LINE#         76
+  C:0EC1H         LINE#         77
+  C:0ED6H         LINE#         78
+  C:0ED8H         LINE#         80
+  C:0EDBH         LINE#         81
+  C:0EDBH         LINE#         82
+  C:0EF0H         LINE#         83
+  C:0EF0H         LINE#         85
+  C:0EF2H         LINE#         86
+  -------         ENDPROC       _GETDIGIT
+  -------         PROC          MAIN
+  C:0EF3H         LINE#         11
+  C:0EF3H         LINE#         12
+  C:0EF3H         LINE#         13
+  C:0EF8H         LINE#         14
+  C:0EFBH         LINE#         15
+  C:0EFEH         LINE#         18
+  C:0EFEH         LINE#         19
+  C:0EFEH         LINE#         20
+  C:0F07H         LINE#         22
+  C:0F0AH         LINE#         23
+  C:0F15H         LINE#         25
+  C:0F18H         LINE#         26
+  C:0F2AH         LINE#         28
+  C:0F33H         LINE#         29
+  C:0F3AH         LINE#         30
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?CLDPTR
+  C:0B5CH         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?IMUL
+  C:0B75H         PUBLIC        ?C?IMUL
+  -------         ENDMOD        ?C?IMUL
+
+  -------         MODULE        ?C?SIDIV
+  C:0B87H         PUBLIC        ?C?SIDIV
+  -------         ENDMOD        ?C?SIDIV
+
+  -------         MODULE        ?C?ILDPTR
+  C:0BBDH         PUBLIC        ?C?ILDPTR
+  -------         ENDMOD        ?C?ILDPTR
+
+  -------         MODULE        ?C?ILDOPTR
+  C:0BE8H         PUBLIC        ?C?ILDOPTR
+  -------         ENDMOD        ?C?ILDOPTR
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  01/14/2025  17:13:16  PAGE 12
+
+
+  -------         MODULE        ?C?ISTOPTR
+  C:0C20H         PUBLIC        ?C?ISTOPTR
+  -------         ENDMOD        ?C?ISTOPTR
+
+  -------         MODULE        PRINTF
+  D:0053H         PUBLIC        ?_PRINTF517?BYTE
+  D:0053H         PUBLIC        ?_PRINTF?BYTE
+  D:0053H         PUBLIC        ?_SPRINTF517?BYTE
+  D:0053H         PUBLIC        ?_SPRINTF?BYTE
+  C:0862H         PUBLIC        _PRINTF
+  C:0862H         PUBLIC        _PRINTF517
+  C:085CH         PUBLIC        _SPRINTF
+  C:085CH         PUBLIC        _SPRINTF517
+  -------         ENDMOD        PRINTF
+
+  -------         MODULE        ?C?STRCPY
+  C:0D19H         PUBLIC        ?C?STRCPY
+  -------         ENDMOD        ?C?STRCPY
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0D36H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:0D63H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?UIDIV
+  C:0D75H         PUBLIC        ?C?UIDIV
+  -------         ENDMOD        ?C?UIDIV
+
+  -------         MODULE        ?C?PLDIIDATA
+  C:0DCAH         PUBLIC        ?C?PLDIIDATA
+  -------         ENDMOD        ?C?PLDIIDATA
+
+  -------         MODULE        ?C?CCASE
+  C:0DDAH         PUBLIC        ?C?CCASE
+  -------         ENDMOD        ?C?CCASE
+
+  -------         MODULE        PUTCHAR
+  C:1104H         PUBLIC        _PUTCHAR
+  -------         ENDMOD        PUTCHAR
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DS3234_SETTIME?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_TM1637_DISPLAYNUM?MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 0408H BYTE (50%) *
+******************************************************************************
+
+Program Size: data=94.1 xdata=0 code=2736
+LINK/LOCATE RUN COMPLETE.  2 WARNING(S),  0 ERROR(S)
