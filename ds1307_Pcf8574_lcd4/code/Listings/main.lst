@@ -1,0 +1,52 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              02/17/2025 12:06:22 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include <stdio.h>
+   3          #include <stdlib.h>
+   4          #include <./assets/ds1307/ds1307.h>
+   5          #include <./assets/lcd/LCD_Serial.h>
+   6          //------------------------------------------------------------------------------
+   7          char str[20];
+   8          int time[8];
+   9          //------------------------------------------------------------------------------
+  10          int main() 
+  11          {
+  12   1        LCD_init(0x4E);       // Expander Address  
+  13   1        ds1307_init();
+  14   1        
+  15   1        while(1)
+  16   1        {
+  17   2          ds1307_getDateTime(time);
+  18   2          
+  19   2          sprintf(str, "%s, %s", get_wDayStr(time[3]), get_fullDateStr(time)); //Date
+  20   2          LCD_string(0, 0, str);
+  21   2          
+  22   2          sprintf(str, "%s", get_fullTimeStr(time));      //Time
+  23   2          LCD_string(1, 0, str);
+  24   2        
+  25   2          __delay_ms(1000);   
+  26   2        }
+  27   1      }
+  28          //------------------------------------------------------------------------------
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =   1150    ----
+   CONSTANT SIZE    =    125    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     41      49
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
