@@ -1,0 +1,58 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              01/17/2025 12:42:45 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include <stdio.h>
+   3          #include <./assets/dht11/dht11.h>
+   4          #include <./assets/ht16k33/ht16k33.h>
+   5          //------------------------------------------------------------------------------
+   6          unsigned char str[12];
+   7          unsigned char sensorData[5];
+   8          //------------------------------------------------------------------------------
+   9          int main() 
+  10          {       
+  11   1        ht16k33_init();
+  12   1        
+  13   1        while(1)
+  14   1        { 
+  15   2          oneWire_start();
+  16   2          
+  17   2          if(oneWire_getResponse())
+  18   2          { 
+  19   3            dht11_getSensorData(sensorData);
+  20   3          }
+  21   2          
+  22   2          if(dht11_isChecksumValid(sensorData))
+  23   2          {
+  24   3            ht16k33_displayText("Error");
+  25   3          }
+  26   2          else
+  27   2            {
+  28   3              sprintf(str, "%2u%c %2u°C", dht11_getHumidity(sensorData), '%', dht11_getTemperature(sensorData));
+  29   3              ht16k33_displayText(str);
+  30   3            }
+  31   2            __delay_ms(100);
+  32   2        }
+  33   1      }
+  34          //------------------------------------------------------------------------------
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    739    ----
+   CONSTANT SIZE    =    217    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     17      27
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
