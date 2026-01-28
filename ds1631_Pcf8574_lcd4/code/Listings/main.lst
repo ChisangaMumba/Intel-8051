@@ -1,0 +1,53 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              01/16/2025 17:54:32 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include <stdio.h>
+   3          #include <stdlib.h>
+   4          #include <./assets/ds1631/ds1631.h>
+   5          #include "assets/lcd/LCD_Serial.h"
+   6          //------------------------------------------------------------------------------
+   7          unsigned char addr = 0x90; // Temperature sensor device Address
+   8          int tempr;
+   9          unsigned char resNum;
+  10          char out[30];
+  11          //------------------------------------------------------------------------------
+  12          int main() 
+  13          {
+  14   1        LCD_init(0x4E);       // Expander Address
+  15   1        LCD_string(0,5,"DS1621");
+  16   1        
+  17   1        ds1631_init(addr, RES12_BIT); 
+  18   1        resNum = ds1631_getResolutionNum(addr); 
+  19   1        
+  20   1        while(1)
+  21   1        {
+  22   2          tempr = ds1631_read2ByteReg(addr, TEMP_REG);
+  23   2          
+  24   2          sprintf(out, "Tempr: %3.4f%cC", toFloat(tempr, resNum), DEG_SYMBOL);
+  25   2          LCD_string(1,0,out);  
+  26   2          //__delay_ms(1000);
+  27   2        }
+  28   1      }
+  29          //------------------------------------------------------------------------------
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    700    ----
+   CONSTANT SIZE    =     39    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     39      31
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
