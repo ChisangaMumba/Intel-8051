@@ -1,0 +1,47 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              01/23/2025 19:31:41 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include <./assets/ds1621/ds1621.h>
+   3          #include <./assets/TM1637/TM1637.h>
+   4          //------------------------------------------------------------------------------
+   5          unsigned char addr = 0x90; // Temperature sensor device Address
+   6          float tempr;
+   7          char str[10];
+   8          //------------------------------------------------------------------------------
+   9          int main() 
+  10          {      
+  11   1        TM1637_init(7);
+  12   1        ds1621_init(addr);
+  13   1          
+  14   1        while(1)
+  15   1        { 
+  16   2          tempr = ds1621_readTemp(addr);
+  17   2          sprintf(str, "%5.1f°%c", toFloat(tempr), (tempMode == 0) ? 'c' : 'f');
+  18   2          
+  19   2          TM1637_displayText(str);
+  20   2          __delay_ms(100);
+  21   2        }
+  22   1      }
+  23          //------------------------------------------------------------------------------
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    865    ----
+   CONSTANT SIZE    =     14    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     39      38
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
