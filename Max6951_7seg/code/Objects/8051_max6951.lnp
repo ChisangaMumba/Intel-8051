@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\8051_max6951" 
+PRINT(".\Listings\8051_max6951.m51")
