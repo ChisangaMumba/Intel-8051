@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\8051_dht22_tm1637_switchModes" 
+PRINT(".\Listings\8051_dht22_tm1637_switchModes.m51")
