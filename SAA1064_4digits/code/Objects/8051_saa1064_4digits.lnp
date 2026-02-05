@@ -1,0 +1,4 @@
+".\Objects\STARTUP.obj",
+".\Objects\main.obj" 
+TO ".\Objects\8051_saa1064_4digits" 
+PRINT(".\Listings\8051_saa1064_4digits.m51")

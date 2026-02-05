@@ -1,0 +1,763 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    08/01/2025  13:14:54  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\main.obj TO .\Objects\8051_saa1064_4digits PRINT (.\Listing
+>> s\8051_saa1064_4digits.m51)
+
+
+MEMORY MODEL: SMALL WITH FLOATING POINT ARITHMETIC
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPADD)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPMUL)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FCAST)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (PRINTF)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPGETOPN)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPROUND)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPCONVERT)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FPDIV)
+  C:\KEIL_V5\C51\LIB\C51FPS.LIB (?C?FTNPWR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LNEG)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?LLDIDATA0)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIIDATA)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CCASE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (PUTCHAR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (TOUPPER)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (STRLEN)
+
+
+LINK MAP OF MODULE:  .\Objects\8051_saa1064_4digits (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0006H     UNIT         ?DT?_SAA1064_DISPLAYFLOAT?MAIN
+                    000EH     0012H                  *** GAP ***
+            BIT     0020H.0   0001H.1   UNIT         _BIT_GROUP_
+                    0021H.1   0000H.7                *** GAP ***
+            DATA    0022H     0022H     UNIT         _DATA_GROUP_
+            DATA    0044H     001EH     UNIT         ?DT?MAIN
+            IDATA   0062H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+                    0003H     07FDH                  *** GAP ***
+            CODE    0800H     0571H     UNIT         ?C?LIB_CODE
+            CODE    0D71H     046FH     UNIT         ?PR?PRINTF?PRINTF
+            CODE    11E0H     008CH     UNIT         ?C_C51STARTUP
+            CODE    126CH     0077H     UNIT         ?PR?_CALCTEMP?MAIN
+            CODE    12E3H     004FH     UNIT         ?PR?_SAA1064_WRITE?MAIN
+            CODE    1332H     004EH     UNIT         ?PR?_GETCUSTOMCHAR?MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/01/2025  13:14:54  PAGE 2
+
+
+            CODE    1380H     0045H     UNIT         ?PR?_FINDPOSCHAR?MAIN
+            CODE    13C5H     0040H     UNIT         ?PR?_GETDIGIT?MAIN
+            CODE    1405H     0039H     UNIT         ?PR?MAIN?MAIN
+            CODE    143EH     0030H     UNIT         ?PR?_I2C_WRITE?MAIN
+            CODE    146EH     002CH     UNIT         ?PR?_MCP9800_READ?MAIN
+            CODE    149AH     0028H     UNIT         ?CO?MAIN
+            CODE    14C2H     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
+            CODE    14E9H     0026H     UNIT         ?PR?_I2C_READ?MAIN
+            CODE    150FH     0023H     UNIT         ?PR?_SAA1064_DISPLAYFLOAT?MAIN
+            CODE    1532H     0022H     UNIT         ?PR?_MCP9800_READCONFIG?MAIN
+            CODE    1554H     001FH     UNIT         ?PR?_SAA1064_DISPLAYINT?MAIN
+            CODE    1573H     001EH     UNIT         ?PR?___DELAY_MS?MAIN
+            CODE    1591H     001BH     UNIT         ?PR?_GET_LASTCHARADDR?MAIN
+            CODE    15ACH     0018H     UNIT         ?PR?SAA1064_INIT?MAIN
+            CODE    15C4H     0016H     UNIT         ?C_INITSEG
+            CODE    15DAH     0015H     UNIT         ?PR?_STRLEN?STRLEN
+            CODE    15EFH     0013H     UNIT         ?PR?_SAA1064_DISPLAYTEXT?MAIN
+            CODE    1602H     0012H     UNIT         ?PR?_MCP9800_INIT?MAIN
+            CODE    1614H     0012H     UNIT         ?PR?_MCP9800_WRITE?MAIN
+            CODE    1626H     0011H     UNIT         ?PR?_TOUPPER?TOUPPER
+            CODE    1637H     000EH     UNIT         ?PR?_MCP9800_WRITECONFIG?MAIN
+            CODE    1645H     000CH     UNIT         ?PR?_I2C_ACK?MAIN
+            CODE    1651H     000CH     UNIT         ?PR?_MCP9800_GETRESOLUTIONNUM?MAIN
+            CODE    165DH     000AH     UNIT         ?PR?___DELAY_US?MAIN
+            CODE    1667H     0009H     UNIT         ?PR?I2C_RESTART?MAIN
+            CODE    1670H     0009H     UNIT         ?PR?I2C_STOP?MAIN
+            CODE    1679H     0006H     UNIT         ?PR?_WRITECHAR?MAIN
+            CODE    167FH     0005H     UNIT         ?PR?I2C_INIT?MAIN
+            CODE    1684H     0005H     UNIT         ?PR?I2C_START?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\8051_saa1064_4digits (?C_STARTUP)
+
+
+SEGMENT                                       BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT                      START    LENGTH     START    LENGTH
+------------------------------------------------------------------------------
+?C_C51STARTUP                              -----    -----      -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                              -----    -----      -----    -----
+  +--> ?PR?SAA1064_INIT?MAIN
+  +--> ?PR?_MCP9800_INIT?MAIN
+  +--> ?PR?_MCP9800_GETRESOLUTIONNUM?MAIN
+  +--> ?PR?_MCP9800_READ?MAIN
+  +--> ?PR?_CALCTEMP?MAIN
+  +--> ?PR?_SAA1064_DISPLAYINT?MAIN
+  +--> ?PR?___DELAY_MS?MAIN
+
+?PR?SAA1064_INIT?MAIN                      -----    -----      -----    -----
+  +--> ?PR?I2C_INIT?MAIN
+  +--> ?PR?I2C_START?MAIN
+  +--> ?PR?_I2C_WRITE?MAIN
+  +--> ?PR?I2C_STOP?MAIN
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/01/2025  13:14:54  PAGE 3
+
+
+?PR?_I2C_WRITE?MAIN                        -----    -----      -----    -----
+  +--> ?PR?I2C_START?MAIN
+  +--> ?PR?_I2C_ACK?MAIN
+
+?PR?_MCP9800_INIT?MAIN                     -----    -----      -----    -----
+  +--> ?PR?___DELAY_MS?MAIN
+  +--> ?PR?_MCP9800_WRITECONFIG?MAIN
+
+?PR?_MCP9800_WRITECONFIG?MAIN              -----    -----      -----    -----
+  +--> ?PR?I2C_START?MAIN
+  +--> ?PR?_I2C_WRITE?MAIN
+  +--> ?PR?I2C_STOP?MAIN
+
+?PR?_MCP9800_GETRESOLUTIONNUM?MAIN         -----    -----      -----    -----
+  +--> ?PR?_MCP9800_READCONFIG?MAIN
+
+?PR?_MCP9800_READCONFIG?MAIN               -----    -----      -----    -----
+  +--> ?PR?I2C_START?MAIN
+  +--> ?PR?_I2C_WRITE?MAIN
+  +--> ?PR?I2C_RESTART?MAIN
+  +--> ?PR?_I2C_READ?MAIN
+  +--> ?PR?I2C_STOP?MAIN
+
+?PR?_I2C_READ?MAIN                         -----    -----      -----    -----
+  +--> ?PR?_I2C_ACK?MAIN
+
+?PR?_MCP9800_READ?MAIN                     -----    -----      0022H    0002H
+  +--> ?PR?_I2C_WRITE?MAIN
+  +--> ?PR?I2C_RESTART?MAIN
+  +--> ?PR?_I2C_READ?MAIN
+  +--> ?PR?I2C_STOP?MAIN
+
+?PR?_CALCTEMP?MAIN                         -----    -----      0022H    0007H
+
+?PR?_SAA1064_DISPLAYINT?MAIN               -----    -----      0022H    0006H
+  +--> ?CO?MAIN
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_SAA1064_DISPLAYTEXT?MAIN
+
+?PR?PRINTF?PRINTF                          0020H.0  0001H.1    0028H    001CH
+  +--> ?PR?PUTCHAR?PUTCHAR
+
+?PR?_SAA1064_DISPLAYTEXT?MAIN              -----    -----      -----    -----
+  +--> ?PR?I2C_START?MAIN
+  +--> ?PR?_I2C_WRITE?MAIN
+  +--> ?PR?_SAA1064_WRITE?MAIN
+  +--> ?PR?I2C_STOP?MAIN
+
+?PR?_SAA1064_WRITE?MAIN                    -----    -----      0028H    0007H
+  +--> ?PR?_FINDPOSCHAR?MAIN
+  +--> ?PR?_GET_LASTCHARADDR?MAIN
+  +--> ?PR?_WRITECHAR?MAIN
+
+?PR?_FINDPOSCHAR?MAIN                      -----    -----      002FH    0006H
+  +--> ?PR?_STRLEN?STRLEN
+
+?PR?_GET_LASTCHARADDR?MAIN                 -----    -----      002FH    0003H
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/01/2025  13:14:54  PAGE 4
+
+
+  +--> ?PR?_STRLEN?STRLEN
+
+?PR?_WRITECHAR?MAIN                        -----    -----      -----    -----
+  +--> ?PR?_GETDIGIT?MAIN
+  +--> ?PR?_I2C_WRITE?MAIN
+
+?PR?_GETDIGIT?MAIN                         -----    -----      002FH    0003H
+  +--> ?CO?MAIN
+  +--> ?PR?_GETCUSTOMCHAR?MAIN
+
+?PR?_GETCUSTOMCHAR?MAIN                    -----    -----      0032H    0003H
+  +--> ?CO?MAIN
+  +--> ?PR?_TOUPPER?TOUPPER
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\8051_saa1064_4digits (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:11E0H         SEGMENT       ?C_C51STARTUP
+  I:0062H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:11E3H         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:11E0H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:11E0H         LINE#         133
+  C:11E2H         LINE#         134
+  C:11E3H         LINE#         135
+  C:11E4H         LINE#         136
+  C:11E6H         LINE#         185
+  C:11E9H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/01/2025  13:14:54  PAGE 5
+
+
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  C:14A4H         PUBLIC        digits
+  D:00A8H         PUBLIC        IE
+  C:146EH         PUBLIC        _mcp9800_read
+  C:1573H         PUBLIC        ___delay_ms
+  C:14AEH         PUBLIC        chars
+  D:00B8H         PUBLIC        IP
+  C:165DH         PUBLIC        ___delay_us
+  D:0044H         PUBLIC        addr
+  C:14B8H         PUBLIC        charCode
+  C:1614H         PUBLIC        _mcp9800_write
+  C:1651H         PUBLIC        _mcp9800_getResolutionNum
+  C:15EFH         PUBLIC        _SAA1064_displayText
+  C:1405H         PUBLIC        main
+  C:1667H         PUBLIC        I2C_restart
+  D:0045H         PUBLIC        tempr
+  C:1554H         PUBLIC        _SAA1064_displayInt
+  C:1602H         PUBLIC        _mcp9800_init
+  C:126CH         PUBLIC        _calcTemp
+  C:1679H         PUBLIC        _writeChar
+  C:12E3H         PUBLIC        _SAA1064_write
+  D:0098H         PUBLIC        SCON
+  D:0088H         PUBLIC        TCON
+  C:13C5H         PUBLIC        _getDigit
+  C:15ACH         PUBLIC        SAA1064_init
+  C:14E9H         PUBLIC        _I2C_read
+  D:0049H         PUBLIC        resValues
+  C:1332H         PUBLIC        _getCustomChar
+  D:0059H         PUBLIC        rawData
+  C:1446H         PUBLIC        _I2C_write
+  C:1645H         PUBLIC        _I2C_ack
+  C:1684H         PUBLIC        I2C_start
+  C:167FH         PUBLIC        I2C_init
+  C:1591H         PUBLIC        _get_lastCharAddr
+  C:1380H         PUBLIC        _findPosChar
+  B:0090H.1       PUBLIC        SDA
+  D:005BH         PUBLIC        str
+  B:0090H.0       PUBLIC        SCL
+  C:1670H         PUBLIC        I2C_stop
+  D:00C8H         PUBLIC        T2CON
+  D:0061H         PUBLIC        resInd
+  C:1532H         PUBLIC        _mcp9800_readConfig
+  C:150FH         PUBLIC        _SAA1064_displayFloat
+  D:00D0H         PUBLIC        PSW
+  C:1637H         PUBLIC        _mcp9800_writeConfig
+  -------         PROC          ___DELAY_MS
+  D:0006H         SYMBOL        d
+  -------         DO            
+  D:0004H         SYMBOL        a
+  -------         ENDDO         
+  C:1573H         LINE#         4
+  C:1573H         LINE#         5
+  C:1573H         LINE#         7
+  C:157CH         LINE#         8
+  C:1590H         LINE#         9
+  -------         ENDPROC       ___DELAY_MS
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/01/2025  13:14:54  PAGE 6
+
+
+  -------         PROC          ___DELAY_US
+  D:0007H         SYMBOL        d
+  C:165DH         LINE#         11
+  C:165DH         LINE#         12
+  C:165DH         LINE#         13
+  C:1666H         LINE#         14
+  -------         ENDPROC       ___DELAY_US
+  -------         PROC          I2C_INIT
+  C:167FH         LINE#         10
+  C:167FH         LINE#         11
+  C:167FH         LINE#         12
+  C:1681H         LINE#         13
+  C:1683H         LINE#         14
+  -------         ENDPROC       I2C_INIT
+  -------         PROC          I2C_START
+  C:1684H         LINE#         16
+  C:1684H         LINE#         17
+  C:1684H         LINE#         18
+  C:1686H         LINE#         19
+  C:1688H         LINE#         20
+  -------         ENDPROC       I2C_START
+  -------         PROC          I2C_RESTART
+  C:1667H         LINE#         22
+  C:1667H         LINE#         23
+  C:1667H         LINE#         24
+  C:1669H         LINE#         25
+  C:166BH         LINE#         26
+  C:166DH         LINE#         27
+  C:166FH         LINE#         28
+  -------         ENDPROC       I2C_RESTART
+  -------         PROC          I2C_STOP
+  C:1670H         LINE#         30
+  C:1670H         LINE#         31
+  C:1670H         LINE#         32
+  C:1672H         LINE#         33
+  C:1674H         LINE#         34
+  C:1676H         LINE#         35
+  C:1678H         LINE#         36
+  -------         ENDPROC       I2C_STOP
+  -------         PROC          _I2C_ACK
+  D:0007H         SYMBOL        ackn
+  C:1645H         LINE#         38
+  C:1645H         LINE#         39
+  C:1645H         LINE#         40
+  C:164AH         LINE#         41
+  C:164CH         LINE#         42
+  C:164EH         LINE#         43
+  C:1650H         LINE#         44
+  -------         ENDPROC       _I2C_ACK
+  C:1441H         SYMBOL        L?0072
+  -------         PROC          L?0071
+  -------         ENDPROC       L?0071
+  C:1441H         SYMBOL        L?0072
+  -------         PROC          _I2C_WRITE
+  D:0007H         SYMBOL        _data
+  -------         DO            
+  D:0006H         SYMBOL        tx
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/01/2025  13:14:54  PAGE 7
+
+
+  -------         ENDDO         
+  C:1446H         LINE#         46
+  C:1446H         LINE#         47
+  C:1446H         LINE#         51
+  C:1448H         LINE#         52
+  C:1448H         LINE#         53
+  C:145BH         LINE#         54
+  C:145DH         LINE#         55
+  C:145FH         LINE#         56
+  C:1463H         LINE#         58
+  C:1468H         LINE#         60
+  C:146DH         LINE#         61
+  -------         ENDPROC       _I2C_WRITE
+  -------         PROC          _I2C_READ
+  D:0007H         SYMBOL        ackState
+  -------         DO            
+  D:0004H         SYMBOL        bitValue
+  D:0005H         SYMBOL        rx
+  D:0006H         SYMBOL        _data
+  -------         ENDDO         
+  C:14E9H         LINE#         63
+  C:14E9H         LINE#         64
+  C:14E9H         LINE#         65
+  C:14EBH         LINE#         67
+  C:14ECH         LINE#         68
+  C:14ECH         LINE#         69
+  C:14EEH         LINE#         71
+  C:14F3H         LINE#         72
+  C:1503H         LINE#         74
+  C:1505H         LINE#         75
+  C:1509H         LINE#         77
+  C:150CH         LINE#         79
+  C:150EH         LINE#         80
+  -------         ENDPROC       _I2C_READ
+  -------         PROC          _MCP9800_INIT
+  D:0002H         SYMBOL        addr
+  D:0003H         SYMBOL        res
+  C:1602H         LINE#         6
+  C:1606H         LINE#         7
+  C:1606H         LINE#         8
+  C:160DH         LINE#         9
+  -------         ENDPROC       _MCP9800_INIT
+  -------         PROC          _MCP9800_WRITECONFIG
+  D:0007H         SYMBOL        addr
+  D:0005H         SYMBOL        settings
+  C:1637H         LINE#         12
+  C:1637H         LINE#         13
+  C:1637H         LINE#         14
+  C:163AH         LINE#         16
+  C:163DH         LINE#         17
+  C:163FH         LINE#         18
+  C:1642H         LINE#         20
+  -------         ENDPROC       _MCP9800_WRITECONFIG
+  -------         PROC          _MCP9800_READCONFIG
+  D:0005H         SYMBOL        addr
+  -------         DO            
+  D:0007H         SYMBOL        config
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/01/2025  13:14:54  PAGE 8
+
+
+  -------         ENDDO         
+  C:1532H         LINE#         23
+  C:1534H         LINE#         24
+  C:1534H         LINE#         25
+  C:1536H         LINE#         27
+  C:1539H         LINE#         29
+  C:153EH         LINE#         30
+  C:1543H         LINE#         31
+  C:1546H         LINE#         32
+  C:154CH         LINE#         33
+  C:1551H         LINE#         35
+  -------         ENDPROC       _MCP9800_READCONFIG
+  -------         PROC          _MCP9800_GETRESOLUTIONNUM
+  D:0007H         SYMBOL        addr
+  -------         DO            
+  D:0007H         SYMBOL        resNum
+  -------         ENDDO         
+  C:1651H         LINE#         40
+  C:1651H         LINE#         41
+  C:1651H         LINE#         42
+  C:1654H         LINE#         44
+  C:165CH         LINE#         45
+  -------         ENDPROC       _MCP9800_GETRESOLUTIONNUM
+  -------         PROC          _MCP9800_WRITE
+  D:0006H         SYMBOL        addr
+  D:0005H         SYMBOL        reg
+  D:0002H         SYMBOL        settings
+  C:1614H         LINE#         47
+  C:1616H         LINE#         48
+  C:1616H         LINE#         49
+  C:1616H         LINE#         51
+  C:1616H         LINE#         52
+  C:1619H         LINE#         53
+  C:161EH         LINE#         54
+  C:1623H         LINE#         56
+  -------         ENDPROC       _MCP9800_WRITE
+  -------         PROC          _MCP9800_READ
+  D:0004H         SYMBOL        addr
+  D:0005H         SYMBOL        reg
+  -------         DO            
+  D:0022H         SYMBOL        data_
+  -------         ENDDO         
+  C:146EH         LINE#         59
+  C:1470H         LINE#         60
+  C:1470H         LINE#         63
+  C:1470H         LINE#         65
+  C:1470H         LINE#         66
+  C:1473H         LINE#         67
+  C:1476H         LINE#         68
+  C:147CH         LINE#         69
+  C:1483H         LINE#         70
+  C:148AH         LINE#         72
+  C:148DH         LINE#         74
+  C:1499H         LINE#         75
+  -------         ENDPROC       _MCP9800_READ
+  -------         PROC          _CALCTEMP
+  D:0022H         SYMBOL        rawData
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/01/2025  13:14:54  PAGE 9
+
+
+  D:0024H         SYMBOL        resInd
+  -------         DO            
+  D:0025H         SYMBOL        tempr
+  D:0006H         SYMBOL        count
+  -------         ENDDO         
+  C:126CH         LINE#         77
+  C:1272H         LINE#         78
+  C:1272H         LINE#         79
+  C:1284H         LINE#         80
+  C:128BH         LINE#         82
+  C:128DH         LINE#         83
+  C:128DH         LINE#         84
+  C:12DAH         LINE#         85
+  C:12DAH         LINE#         87
+  C:12E2H         LINE#         88
+  -------         ENDPROC       _CALCTEMP
+  -------         PROC          SAA1064_INIT
+  C:15ACH         LINE#         6
+  C:15ACH         LINE#         7
+  C:15ACH         LINE#         8
+  C:15AFH         LINE#         10
+  C:15B2H         LINE#         12
+  C:15B7H         LINE#         13
+  C:15BCH         LINE#         14
+  C:15C1H         LINE#         16
+  -------         ENDPROC       SAA1064_INIT
+  -------         PROC          _SAA1064_DISPLAYINT
+  D:0006H         SYMBOL        number
+  -------         DO            
+  D:0022H         SYMBOL        strNum
+  -------         ENDDO         
+  C:1554H         LINE#         19
+  C:1554H         LINE#         20
+  C:1554H         LINE#         22
+  C:156AH         LINE#         24
+  -------         ENDPROC       _SAA1064_DISPLAYINT
+  -------         PROC          _SAA1064_DISPLAYFLOAT
+  D:0004H         SYMBOL        number
+  -------         DO            
+  D:0008H         SYMBOL        strNum
+  -------         ENDDO         
+  C:150FH         LINE#         27
+  C:150FH         LINE#         28
+  C:150FH         LINE#         30
+  C:1529H         LINE#         32
+  -------         ENDPROC       _SAA1064_DISPLAYFLOAT
+  -------         PROC          _SAA1064_DISPLAYTEXT
+  D:0001H         SYMBOL        text
+  C:15EFH         LINE#         35
+  C:15EFH         LINE#         36
+  C:15EFH         LINE#         37
+  C:15F2H         LINE#         39
+  C:15F7H         LINE#         40
+  C:15FCH         LINE#         41
+  C:15FFH         LINE#         43
+  -------         ENDPROC       _SAA1064_DISPLAYTEXT
+  -------         PROC          _SAA1064_WRITE
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/01/2025  13:14:54  PAGE 10
+
+
+  D:0028H         SYMBOL        text
+  -------         DO            
+  D:002BH         SYMBOL        charPos
+  D:002CH         SYMBOL        dp
+  D:002DH         SYMBOL        dpPos
+  -------         DO            
+  D:002EH         SYMBOL        chr
+  -------         ENDDO         
+  -------         ENDDO         
+  C:12E3H         LINE#         46
+  C:12E9H         LINE#         47
+  C:12E9H         LINE#         48
+  C:12EFH         LINE#         49
+  C:12F8H         LINE#         51
+  C:1307H         LINE#         53
+  C:1312H         LINE#         54
+  C:1312H         LINE#         55
+  C:1320H         LINE#         57
+  C:1324H         LINE#         58
+  C:132FH         LINE#         59
+  C:1331H         LINE#         60
+  -------         ENDPROC       _SAA1064_WRITE
+  -------         PROC          _WRITECHAR
+  D:0007H         SYMBOL        chrPos
+  D:0005H         SYMBOL        dpPos
+  D:0003H         SYMBOL        chr
+  -------         DO            
+  D:0007H         SYMBOL        digit
+  -------         ENDDO         
+  C:1679H         LINE#         62
+  C:1679H         LINE#         63
+  C:1679H         LINE#         64
+  C:167CH         LINE#         66
+  -------         ENDPROC       _WRITECHAR
+  -------         PROC          _GETDIGIT
+  D:002FH         SYMBOL        charPos
+  D:0030H         SYMBOL        dpPos
+  D:0007H         SYMBOL        chr
+  -------         DO            
+  D:0031H         SYMBOL        digit
+  -------         ENDDO         
+  C:13C5H         LINE#         69
+  C:13CBH         LINE#         70
+  C:13CBH         LINE#         71
+  C:13CEH         LINE#         73
+  C:13F3H         LINE#         75
+  C:1404H         LINE#         76
+  -------         ENDPROC       _GETDIGIT
+  -------         PROC          _GETCUSTOMCHAR
+  D:0032H         SYMBOL        chr
+  -------         DO            
+  D:0033H         SYMBOL        i
+  D:0034H         SYMBOL        digit
+  -------         ENDDO         
+  C:1332H         LINE#         78
+  C:1334H         LINE#         79
+  C:1334H         LINE#         80
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/01/2025  13:14:54  PAGE 11
+
+
+  C:1339H         LINE#         82
+  C:134EH         LINE#         83
+  C:134EH         LINE#         84
+  C:1369H         LINE#         85
+  C:1369H         LINE#         86
+  C:1377H         LINE#         87
+  C:1379H         LINE#         88
+  C:1379H         LINE#         89
+  C:137BH         LINE#         90
+  C:137DH         LINE#         92
+  C:137FH         LINE#         93
+  -------         ENDPROC       _GETCUSTOMCHAR
+  -------         PROC          _FINDPOSCHAR
+  D:002FH         SYMBOL        chars
+  D:0032H         SYMBOL        toFind
+  -------         DO            
+  D:0033H         SYMBOL        i
+  D:0034H         SYMBOL        pos
+  -------         ENDDO         
+  C:1380H         LINE#         95
+  C:1388H         LINE#         96
+  C:1388H         LINE#         97
+  C:138EH         LINE#         99
+  C:13A7H         LINE#         100
+  C:13A7H         LINE#         101
+  C:13B7H         LINE#         102
+  C:13B7H         LINE#         103
+  C:13BCH         LINE#         104
+  C:13BEH         LINE#         105
+  C:13BEH         LINE#         106
+  C:13C2H         LINE#         108
+  C:13C4H         LINE#         109
+  -------         ENDPROC       _FINDPOSCHAR
+  -------         PROC          _GET_LASTCHARADDR
+  D:002FH         SYMBOL        text
+  -------         DO            
+  D:0007H         SYMBOL        lastAddr
+  -------         ENDDO         
+  C:1591H         LINE#         111
+  C:1597H         LINE#         112
+  C:1597H         LINE#         113
+  C:159DH         LINE#         115
+  C:15ABH         LINE#         116
+  -------         ENDPROC       _GET_LASTCHARADDR
+  -------         PROC          MAIN
+  C:1405H         LINE#         12
+  C:1405H         LINE#         13
+  C:1405H         LINE#         14
+  C:1408H         LINE#         15
+  C:140FH         LINE#         16
+  C:1416H         LINE#         18
+  C:1416H         LINE#         19
+  C:1416H         LINE#         20
+  C:1421H         LINE#         21
+  C:142EH         LINE#         25
+  C:1435H         LINE#         26
+  C:143CH         LINE#         27
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/01/2025  13:14:54  PAGE 12
+
+
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?FPADD
+  C:0807H         PUBLIC        ?C?FPADD
+  C:0803H         PUBLIC        ?C?FPSUB
+  -------         ENDMOD        ?C?FPADD
+
+  -------         MODULE        ?C?FPMUL
+  C:08F8H         PUBLIC        ?C?FPMUL
+  -------         ENDMOD        ?C?FPMUL
+
+  -------         MODULE        ?C?FCAST
+  C:0A08H         PUBLIC        ?C?FCASTC
+  C:0A03H         PUBLIC        ?C?FCASTI
+  C:09FEH         PUBLIC        ?C?FCASTL
+  -------         ENDMOD        ?C?FCAST
+
+  -------         MODULE        PRINTF
+  D:0028H         PUBLIC        ?_PRINTF?BYTE
+  D:0028H         PUBLIC        ?_SPRINTF?BYTE
+  C:0DD3H         PUBLIC        _PRINTF
+  C:0DCDH         PUBLIC        _SPRINTF
+  -------         ENDMOD        PRINTF
+
+  -------         MODULE        ?C?FPROUND
+  C:0A86H         PUBLIC        ?C?FPROUND
+  -------         ENDMOD        ?C?FPROUND
+
+  -------         MODULE        ?C?FPCONVERT
+  C:0AB5H         PUBLIC        ?C?FPCONVERT
+  -------         ENDMOD        ?C?FPCONVERT
+
+  -------         MODULE        ?C?FPDIV
+  C:0BBBH         PUBLIC        ?C?FPDIV
+  -------         ENDMOD        ?C?FPDIV
+
+  -------         MODULE        ?C?FTNPWR
+  C:0C88H         PUBLIC        ?C?FTNPWR
+  -------         ENDMOD        ?C?FTNPWR
+
+  -------         MODULE        ?C?CLDPTR
+  C:0CC8H         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0CE1H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?CSTPTR
+  C:0D0EH         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+
+  -------         MODULE        ?C?LNEG
+  C:0D20H         PUBLIC        ?C?LNEG
+  -------         ENDMOD        ?C?LNEG
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  08/01/2025  13:14:54  PAGE 13
+
+
+  -------         MODULE        ?C?LLDIDATA0
+  C:0D2EH         PUBLIC        ?C?LLDIDATA0
+  -------         ENDMOD        ?C?LLDIDATA0
+
+  -------         MODULE        ?C?PLDIIDATA
+  C:0D3BH         PUBLIC        ?C?PLDIIDATA
+  -------         ENDMOD        ?C?PLDIIDATA
+
+  -------         MODULE        ?C?CCASE
+  C:0D4BH         PUBLIC        ?C?CCASE
+  -------         ENDMOD        ?C?CCASE
+
+  -------         MODULE        PUTCHAR
+  C:14C2H         PUBLIC        _PUTCHAR
+  -------         ENDMOD        PUTCHAR
+
+  -------         MODULE        TOUPPER
+  C:1626H         PUBLIC        _toupper
+  -------         ENDMOD        TOUPPER
+
+  -------         MODULE        STRLEN
+  C:15DAH         PUBLIC        _STRLEN
+  -------         ENDMOD        STRLEN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?___DELAY_US?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_MCP9800_WRITE?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SAA1064_DISPLAYFLOAT?MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 03DEH BYTE (48%) *
+******************************************************************************
+
+Program Size: data=80.1 xdata=0 code=3724
+LINK/LOCATE RUN COMPLETE.  3 WARNING(S),  0 ERROR(S)
