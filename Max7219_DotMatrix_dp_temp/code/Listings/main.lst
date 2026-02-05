@@ -1,0 +1,45 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              02/04/2025 18:28:52 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include <./assets/TC72/TC72.h>
+   3          #include <./assets/MAX7219/MAX7219.h>
+   4          //------------------------------------------------------------------------------
+   5          signed int tempr;
+   6          char str[10];
+   7          //------------------------------------------------------------------------------
+   8          int main() 
+   9          {   
+  10   1        MAX7219_init(4);     //Number of chips
+  11   1        TC72_init();
+  12   1      
+  13   1        while(1)
+  14   1        { 
+  15   2          tempr = TC72_readTempr();
+  16   2          
+  17   2          sprintf(str, "%5.1f", toFloat(tempr));
+  18   2          MAX7219_displayText(str);
+  19   2        }
+  20   1      }
+  21          //------------------------------------------------------------------------------
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    521    ----
+   CONSTANT SIZE    =    476    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     12      14
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
