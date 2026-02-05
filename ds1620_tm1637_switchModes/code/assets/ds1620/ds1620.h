@@ -1,0 +1,109 @@
+#ifndef DS1620_H
+#define	DS1620_H
+//------------------------------------------------------------------------------
+#include "ds1620_prototypes.h"
+//------------------------------------------------------------------------------
+void ds1620_init(int tempH, int tempL)
+{
+	DQ = 0;                                       
+	SCLK = 0;       
+	RST = 0;
+	
+	//Set thermostat high and low values (entirely optional)
+	ds1620_writeT_HL(WRITE_TH, tempH);
+	ds1620_writeT_HL(WRITE_TL, tempL);
+	
+	ds1620_writeConfig(0x0A);
+	ds1620_convert(START_CONV);
+}
+//------------------------------------------------------------------------------
+void ds1620_convert(char command)
+{
+	threeWire_start();
+	threeWire_write(command, 8);
+	threeWire_stop();
+}
+//------------------------------------------------------------------------------
+int ds1620_read(char command)
+{
+	int _data = 0;
+
+	threeWire_start();
+	threeWire_write(command, 8);
+	_data = threeWire_read();
+	threeWire_stop();
+
+	return _data;
+}
+//------------------------------------------------------------------------------
+void ds1620_writeT_HL(char command, int _data)
+{	
+	threeWire_start();
+	
+	threeWire_write(command, 8);
+	threeWire_write(_data << 1, 16);
+	__delay_ms(20);
+
+	threeWire_stop();
+}
+//------------------------------------------------------------------------------
+unsigned char ds1620_writeConfig(unsigned char _data)
+{
+	if(_data > 0) 
+	{
+		threeWire_start();
+		threeWire_write(WRITE_CONFIG, 8);
+		threeWire_write(_data, 8);
+		__delay_ms(50);
+		threeWire_stop();
+		
+		if(ds1620_read(READ_CONFIG) == _data)
+		{ 
+			return WRITE_SUCCESSFUL;
+		}
+		else 
+				{ 
+					return WRITE_UNSUCCESSFUL;
+				}
+	}
+	
+	return BAD_CONFIG;
+}
+//------------------------------------------------------------------------------
+// High-resolution temperature calculation. See page 4 of the datasheet for details.
+//------------------------------------------------------------------------------
+float ds1620_getTempFloat(void)
+{
+	int temp_read, count_per_c, count_remain;
+	float tempr;
+	
+	temp_read    = ds1620_read(READ_TEMP);
+	count_per_c  = ds1620_read(READ_COUNTER);
+	count_remain = ds1620_read(READ_SLOPE);
+	
+	if(count_per_c != 0)	// prevents division by zero
+		tempr = (calcTempr(temp_read) - 0.25) + ((count_per_c - count_remain)/count_per_c);
+	
+	return tempr;
+}
+//------------------------------------------------------------------------------
+int ds1620_getTemp(char command)
+{
+	int rawData = ds1620_read(command);
+	
+	return calcTempr(rawData);
+}
+//------------------------------------------------------------------------------
+int calcTempr(int rawData)	
+{
+	int tempr = (rawData >> 1);  //Discard LSByte (Only holds fraction flag _bit - see datasheet)
+
+	if(rawData & 0x0100) //if 9th _bit is a 1, num is negative - 2's complement (see datasheet)
+	{
+		tempr = -128 + (tempr & 0x7f);
+	}
+	
+	return tempr;
+}
+//------------------------------------------------------------------------------
+#endif
