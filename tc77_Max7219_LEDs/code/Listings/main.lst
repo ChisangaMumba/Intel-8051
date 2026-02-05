@@ -1,0 +1,48 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              01/19/2025 22:30:52 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include <stdio.h>
+   3          #include <stdlib.h>
+   4          #include "assets/delay/delay.h"
+   5          #include <./assets/tc77/tc77.h>
+   6          #include <./assets/MAX7219/MAX7219.h>
+   7          //------------------------------------------------------------------------------
+   8          char str[18];  
+   9          signed int tempr;
+  10          //------------------------------------------------------------------------------
+  11          int main() 
+  12          {   
+  13   1        MAX7219_init(SCAN_ALL_DIGITS);
+  14   1        TC77_init();
+  15   1        
+  16   1        while(1)
+  17   1        {   
+  18   2          tempr = TC77_read();
+  19   2       
+  20   2          sprintf(str, "%7.3f°%c", toFloat(tempr), (tempMode == 0) ? 'c' : 'f'); 
+  21   2          MAX7219_displayText(str);
+  22   2        }
+  23   1      }
+  24          //------------------------------------------------------------------------------
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    720    ----
+   CONSTANT SIZE    =     14    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     50      39
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
