@@ -1,0 +1,70 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              02/08/2025 09:35:55 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: C:\Keil_v5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main
+                    -.lst) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          #include <./assets/dht11/dht11.h>
+   3          #include <./assets/Max6953/Max6953.h>
+   4          //------------------------------------------------------------------------------
+   5          char str[6];
+   6          unsigned char sensorData[5];
+   7          int hum, tempr;
+   8          //------------------------------------------------------------------------------
+   9          int main() 
+  10          {   
+  11   1        MAX6953_init();    
+  12   1        dht11_init();
+  13   1      
+  14   1        while(1)
+  15   1        { 
+  16   2          oneWire_start();
+  17   2          
+  18   2          if(oneWire_getResponse())
+  19   2          { 
+  20   3            dht11_getSensorData(sensorData);
+  21   3          }
+  22   2          
+  23   2          if(dht11_isChecksumValid(sensorData))
+  24   2          {
+  25   3            MAX6953_displayText(" Err");
+  26   3          }
+  27   2          else
+  28   2              {
+  29   3                hum = dht11_getHumidity(sensorData);
+  30   3                tempr = dht11_getTemperature(sensorData);
+  31   3                
+  32   3                if(sensorMode == 0)
+  33   3                    sprintf(str, "%2u°C", tempr);
+  34   3                else
+  35   3                    if(sensorMode == 1)
+  36   3                        sprintf(str, "%3u%c", hum, '%');
+  37   3                    
+  38   3                MAX6953_displayText(str);
+  39   3              }
+  40   2          
+  41   2          __delay_ms(100);
+  42   2        }
+  43   1      }
+  44          //------------------------------------------------------------------------------
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    771    ----
+   CONSTANT SIZE    =     21    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     28      22
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =      1    ----
+C51 COMPILER V9.60.7.0   MAIN                                                              02/08/2025 09:35:55 PAGE 2   
+
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

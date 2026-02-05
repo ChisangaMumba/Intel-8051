@@ -1,0 +1,698 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    02/08/2025  09:35:58  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+C:\KEIL_V5\C51\BIN\BL51.EXE .\Objects\STARTUP.obj, .\Objects\main.obj TO .\Objects\8051_max6953_dotMatrix PRINT (.\Listi
+>> ngs\8051_max6953_dotMatrix.m51)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\STARTUP.obj (?C_STARTUP)
+  .\Objects\main.obj (MAIN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CLDOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTOPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (PRINTF)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (STRLEN)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CSTPTR)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?PLDIIDATA)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (?C?CCASE)
+  C:\KEIL_V5\C51\LIB\C51S.LIB (PUTCHAR)
+
+
+LINK MAP OF MODULE:  .\Objects\8051_max6953_dotMatrix (?C_STARTUP)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0014H     UNIT         _DATA_GROUP_
+                    001CH     0004H                  *** GAP ***
+            BIT     0020H.0   0001H.1   UNIT         _BIT_GROUP_
+            BIT     0021H.1   0000H.1   UNIT         ?BI?MAIN
+                    0021H.2   0000H.6                *** GAP ***
+            DATA    0022H     001CH     UNIT         ?DT?MAIN
+            DATA    003EH     0006H     UNIT         ?DT?_MAX6953_DISPLAYNUMBER?MAIN
+            IDATA   0044H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     07FAH                  *** GAP ***
+            CODE    0800H     035CH     UNIT         ?PR?PRINTF?PRINTF
+            CODE    0B5CH     00B0H     UNIT         ?C?LIB_CODE
+            CODE    0C0CH     008CH     UNIT         ?C_C51STARTUP
+            CODE    0C98H     0084H     UNIT         ?PR?MAIN?MAIN
+            CODE    0D1CH     0067H     UNIT         ?PR?_MAX6953_DISPLAYTEXT?MAIN
+            CODE    0D83H     0030H     UNIT         ?PR?_DHT11_CALCCHECKSUM?MAIN
+            CODE    0DB3H     0028H     UNIT         ?PR?_I2C_WRITE?MAIN
+            CODE    0DDBH     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
+            CODE    0E02H     0026H     UNIT         ?PR?_I2C_READ?MAIN
+            CODE    0E28H     0025H     UNIT         ?PR?ONEWIRE_READBYTE?MAIN
+            CODE    0E4DH     0024H     UNIT         ?PR?_DHT11_ISCHECKSUMVALID?MAIN
+            CODE    0E71H     0023H     UNIT         ?PR?MAX6953_INIT?MAIN
+            CODE    0E94H     001FH     UNIT         ?PR?_DHT11_GETSENSORDATA?MAIN
+            CODE    0EB3H     001FH     UNIT         ?PR?_MAX6953_DISPLAYNUMBER?MAIN
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/08/2025  09:35:58  PAGE 2
+
+
+            CODE    0ED2H     001EH     UNIT         ?PR?___DELAY_MS?MAIN
+            CODE    0EF0H     001BH     UNIT         ?PR?_GETCUSTOMCHAR?MAIN
+            CODE    0F0BH     0017H     UNIT         ?PR?_MAX6953_WRITE?MAIN
+            CODE    0F22H     0016H     UNIT         ?PR?_DHT11_GETTEMPERATURE?MAIN
+            CODE    0F38H     0015H     UNIT         ?CO?MAIN
+            CODE    0F4DH     0015H     UNIT         ?PR?_STRLEN?STRLEN
+            CODE    0F62H     0014H     UNIT         ?C_INITSEG
+            CODE    0F76H     0013H     UNIT         ?PR?_DHT11_GETHUMIDITY?MAIN
+            CODE    0F89H     000EH     UNIT         ?PR?ONEWIRE_GETRESPONSE?MAIN
+            CODE    0F97H     000CH     UNIT         ?PR?TIMER_DELAY20MS?MAIN
+            CODE    0FA3H     000CH     UNIT         ?PR?TIMER_DELAY30US?MAIN
+            CODE    0FAFH     000CH     UNIT         ?PR?_I2C_ACK?MAIN
+            CODE    0FBBH     000AH     UNIT         ?PR?___DELAY_US?MAIN
+            CODE    0FC5H     000AH     UNIT         ?PR?TIMER_START?MAIN
+            CODE    0FCFH     0009H     UNIT         ?PR?I2C_RESTART?MAIN
+            CODE    0FD8H     0009H     UNIT         ?PR?I2C_STOP?MAIN
+            CODE    0FE1H     0008H     UNIT         ?PR?ONEWIRE_START?MAIN
+            CODE    0FE9H     0007H     UNIT         ?PR?EXTINT0_INIT?MAIN
+            CODE    0FF0H     0005H     UNIT         ?PR?I2C_INIT?MAIN
+            CODE    0FF5H     0005H     UNIT         ?PR?I2C_START?MAIN
+            CODE    0FFAH     0003H     UNIT         ?PR?EXTINT0_ISR?MAIN
+            CODE    0FFDH     0003H     UNIT         ?PR?DHT11_INIT?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\8051_max6953_dotMatrix (?C_STARTUP)
+
+
+SEGMENT                                    BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT                   START    LENGTH     START    LENGTH
+---------------------------------------------------------------------------
+?C_C51STARTUP                           -----    -----      -----    -----
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN                           -----    -----      -----    -----
+  +--> ?PR?MAX6953_INIT?MAIN
+  +--> ?PR?DHT11_INIT?MAIN
+  +--> ?PR?ONEWIRE_START?MAIN
+  +--> ?PR?ONEWIRE_GETRESPONSE?MAIN
+  +--> ?PR?_DHT11_GETSENSORDATA?MAIN
+  +--> ?PR?_DHT11_ISCHECKSUMVALID?MAIN
+  +--> ?CO?MAIN
+  +--> ?PR?_DHT11_GETHUMIDITY?MAIN
+  +--> ?PR?_DHT11_GETTEMPERATURE?MAIN
+  +--> ?PR?PRINTF?PRINTF
+  +--> ?PR?_MAX6953_DISPLAYTEXT?MAIN
+  +--> ?PR?___DELAY_MS?MAIN
+
+?PR?MAX6953_INIT?MAIN                   -----    -----      -----    -----
+  +--> ?PR?_MAX6953_WRITE?MAIN
+
+?PR?_MAX6953_WRITE?MAIN                 -----    -----      -----    -----
+  +--> ?PR?I2C_START?MAIN
+  +--> ?PR?_I2C_WRITE?MAIN
+  +--> ?PR?I2C_STOP?MAIN
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/08/2025  09:35:58  PAGE 3
+
+
+?PR?_I2C_WRITE?MAIN                     -----    -----      -----    -----
+  +--> ?PR?_I2C_ACK?MAIN
+
+?PR?DHT11_INIT?MAIN                     -----    -----      -----    -----
+  +--> ?PR?EXTINT0_INIT?MAIN
+
+?PR?ONEWIRE_START?MAIN                  -----    -----      -----    -----
+  +--> ?PR?TIMER_DELAY20MS?MAIN
+
+?PR?TIMER_DELAY20MS?MAIN                -----    -----      -----    -----
+  +--> ?PR?TIMER_START?MAIN
+
+?PR?_DHT11_GETSENSORDATA?MAIN           -----    -----      0008H    0003H
+  +--> ?PR?ONEWIRE_READBYTE?MAIN
+
+?PR?ONEWIRE_READBYTE?MAIN               -----    -----      -----    -----
+  +--> ?PR?TIMER_DELAY30US?MAIN
+
+?PR?TIMER_DELAY30US?MAIN                -----    -----      -----    -----
+  +--> ?PR?TIMER_START?MAIN
+
+?PR?_DHT11_ISCHECKSUMVALID?MAIN         -----    -----      0008H    0004H
+  +--> ?PR?_DHT11_CALCCHECKSUM?MAIN
+
+?PR?_DHT11_CALCCHECKSUM?MAIN            -----    -----      000CH    0005H
+
+?PR?PRINTF?PRINTF                       0020H.0  0001H.1    0008H    0014H
+  +--> ?PR?PUTCHAR?PUTCHAR
+
+?PR?_MAX6953_DISPLAYTEXT?MAIN           -----    -----      0008H    0004H
+  +--> ?PR?I2C_START?MAIN
+  +--> ?PR?_I2C_WRITE?MAIN
+  +--> ?PR?_STRLEN?STRLEN
+  +--> ?PR?_GETCUSTOMCHAR?MAIN
+  +--> ?PR?I2C_STOP?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\8051_max6953_dotMatrix (?C_STARTUP)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        ?C_STARTUP
+  C:0C0CH         SEGMENT       ?C_C51STARTUP
+  I:0044H         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0C0FH         SYMBOL        IDATALOOP
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/08/2025  09:35:58  PAGE 4
+
+
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0C0CH         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0000H         LINE#         126
+  C:0C0CH         LINE#         133
+  C:0C0EH         LINE#         134
+  C:0C0FH         LINE#         135
+  C:0C10H         LINE#         136
+  C:0C12H         LINE#         185
+  C:0C15H         LINE#         196
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  C:0EB3H         PUBLIC        _MAX6953_displayNumber
+  D:00A8H         PUBLIC        IE
+  C:0E4DH         PUBLIC        _dht11_isChecksumValid
+  C:0ED2H         PUBLIC        ___delay_ms
+  D:00B8H         PUBLIC        IP
+  C:0F76H         PUBLIC        _dht11_getHumidity
+  D:0022H         PUBLIC        sensorData
+  C:0FBBH         PUBLIC        ___delay_us
+  D:0027H         PUBLIC        charCode
+  D:002DH         PUBLIC        customChar
+  B:0021H.1       PUBLIC        sensorMode
+  C:0C98H         PUBLIC        main
+  C:0FE9H         PUBLIC        ExtInt0_init
+  C:0FCFH         PUBLIC        I2C_restart
+  D:0034H         PUBLIC        tempr
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  C:0FC5H         PUBLIC        timer_start
+  C:0FFDH         PUBLIC        dht11_init
+  C:0E02H         PUBLIC        _I2C_read
+  C:0FFAH         PUBLIC        ExtInt0_isr
+  C:0EF0H         PUBLIC        _getCustomChar
+  C:0E94H         PUBLIC        _dht11_getSensorData
+  C:0D1CH         PUBLIC        _MAX6953_displayText
+  B:0088H.5       PUBLIC        TF0
+  D:0036H         PUBLIC        hum
+  D:008CH         PUBLIC        TH0
+  C:0DB3H         PUBLIC        _I2C_write
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  C:0F0BH         PUBLIC        _MAX6953_write
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/08/2025  09:35:58  PAGE 5
+
+
+  C:0FAFH         PUBLIC        _I2C_ack
+  C:0FF5H         PUBLIC        I2C_start
+  D:008AH         PUBLIC        TL0
+  C:0D83H         PUBLIC        _dht11_calcChecksum
+  C:0FF0H         PUBLIC        I2C_init
+  C:0F89H         PUBLIC        oneWire_getResponse
+  C:0E71H         PUBLIC        MAX6953_init
+  B:0088H.4       PUBLIC        TR0
+  B:0090H.1       PUBLIC        SDA
+  D:0038H         PUBLIC        str
+  C:0F97H         PUBLIC        timer_delay20ms
+  C:0F22H         PUBLIC        _dht11_getTemperature
+  B:0090H.0       PUBLIC        SCL
+  B:00B0H.0       PUBLIC        DATA_PIN
+  C:0FA3H         PUBLIC        timer_delay30us
+  C:0FD8H         PUBLIC        I2C_stop
+  D:00C8H         PUBLIC        T2CON
+  C:0FE1H         PUBLIC        oneWire_start
+  C:0E28H         PUBLIC        oneWire_readByte
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          ___DELAY_MS
+  D:0006H         SYMBOL        d
+  -------         DO            
+  D:0004H         SYMBOL        a
+  -------         ENDDO         
+  C:0ED2H         LINE#         4
+  C:0ED2H         LINE#         5
+  C:0ED2H         LINE#         7
+  C:0EDBH         LINE#         8
+  C:0EEFH         LINE#         9
+  -------         ENDPROC       ___DELAY_MS
+  -------         PROC          ___DELAY_US
+  D:0007H         SYMBOL        d
+  C:0FBBH         LINE#         11
+  C:0FBBH         LINE#         12
+  C:0FBBH         LINE#         13
+  C:0FC4H         LINE#         14
+  -------         ENDPROC       ___DELAY_US
+  -------         PROC          TIMER_START
+  C:0FC5H         LINE#         6
+  C:0FC5H         LINE#         7
+  C:0FC5H         LINE#         8
+  C:0FC7H         LINE#         9
+  C:0FCAH         LINE#         10
+  C:0FCCH         LINE#         11
+  C:0FCEH         LINE#         12
+  -------         ENDPROC       TIMER_START
+  -------         PROC          TIMER_DELAY20MS
+  C:0F97H         LINE#         14
+  C:0F97H         LINE#         15
+  C:0F97H         LINE#         16
+  C:0F9AH         LINE#         17
+  C:0F9DH         LINE#         18
+  C:0FA0H         LINE#         20
+  -------         ENDPROC       TIMER_DELAY20MS
+  -------         PROC          TIMER_DELAY30US
+  C:0FA3H         LINE#         23
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/08/2025  09:35:58  PAGE 6
+
+
+  C:0FA3H         LINE#         24
+  C:0FA3H         LINE#         25
+  C:0FA6H         LINE#         26
+  C:0FA9H         LINE#         27
+  C:0FACH         LINE#         29
+  -------         ENDPROC       TIMER_DELAY30US
+  -------         PROC          ONEWIRE_START
+  C:0FE1H         LINE#         32
+  C:0FE1H         LINE#         33
+  C:0FE1H         LINE#         34
+  C:0FE3H         LINE#         35
+  C:0FE6H         LINE#         36
+  C:0FE8H         LINE#         37
+  -------         ENDPROC       ONEWIRE_START
+  -------         PROC          ONEWIRE_GETRESPONSE
+  -------         DO            
+  D:0007H         SYMBOL        response
+  -------         ENDDO         
+  C:0F89H         LINE#         39
+  C:0F89H         LINE#         40
+  C:0F89H         LINE#         41
+  C:0F8BH         LINE#         43
+  C:0F8EH         LINE#         44
+  C:0F91H         LINE#         45
+  C:0F94H         LINE#         47
+  C:0F96H         LINE#         49
+  C:0F96H         LINE#         50
+  -------         ENDPROC       ONEWIRE_GETRESPONSE
+  -------         PROC          ONEWIRE_READBYTE
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0007H         SYMBOL        dataByte
+  -------         ENDDO         
+  C:0E28H         LINE#         52
+  C:0E28H         LINE#         53
+  C:0E28H         LINE#         54
+  C:0E2AH         LINE#         56
+  C:0E2BH         LINE#         57
+  C:0E2BH         LINE#         58
+  C:0E2EH         LINE#         60
+  C:0E31H         LINE#         61
+  C:0E34H         LINE#         62
+  C:0E34H         LINE#         63
+  C:0E45H         LINE#         64
+  C:0E45H         LINE#         66
+  C:0E48H         LINE#         67
+  C:0E4CH         LINE#         69
+  C:0E4CH         LINE#         70
+  -------         ENDPROC       ONEWIRE_READBYTE
+  -------         PROC          EXTINT0_INIT
+  C:0FE9H         LINE#         6
+  C:0FE9H         LINE#         7
+  C:0FE9H         LINE#         8
+  C:0FEBH         LINE#         9
+  C:0FEDH         LINE#         10
+  C:0FEFH         LINE#         11
+  -------         ENDPROC       EXTINT0_INIT
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/08/2025  09:35:58  PAGE 7
+
+
+  -------         PROC          EXTINT0_ISR
+  C:0FFAH         LINE#         13
+  C:0FFAH         LINE#         15
+  C:0FFCH         LINE#         16
+  -------         ENDPROC       EXTINT0_ISR
+  -------         PROC          DHT11_INIT
+  C:0FFDH         LINE#         8
+  C:0FFDH         LINE#         9
+  C:0FFDH         LINE#         10
+  -------         ENDPROC       DHT11_INIT
+  -------         PROC          _DHT11_CALCCHECKSUM
+  D:000CH         SYMBOL        sensorData
+  -------         DO            
+  D:000FH         SYMBOL        checksum
+  D:0007H         SYMBOL        i
+  -------         ENDDO         
+  C:0D83H         LINE#         13
+  C:0D89H         LINE#         14
+  C:0D89H         LINE#         15
+  C:0D8EH         LINE#         18
+  C:0D8FH         LINE#         19
+  C:0D8FH         LINE#         20
+  C:0DAAH         LINE#         21
+  C:0DAEH         LINE#         23
+  C:0DB2H         LINE#         24
+  -------         ENDPROC       _DHT11_CALCCHECKSUM
+  -------         PROC          _DHT11_ISCHECKSUMVALID
+  D:0008H         SYMBOL        sensorData
+  -------         DO            
+  D:000BH         SYMBOL        isValid
+  -------         ENDDO         
+  C:0E4DH         LINE#         26
+  C:0E53H         LINE#         27
+  C:0E53H         LINE#         28
+  C:0E56H         LINE#         30
+  C:0E6BH         LINE#         31
+  C:0E6BH         LINE#         32
+  C:0E6EH         LINE#         33
+  C:0E6EH         LINE#         35
+  C:0E70H         LINE#         36
+  -------         ENDPROC       _DHT11_ISCHECKSUMVALID
+  -------         PROC          _DHT11_GETTEMPERATURE
+  D:0001H         SYMBOL        sensorData
+  -------         DO            
+  D:0006H         SYMBOL        tempr
+  -------         ENDDO         
+  C:0F22H         LINE#         38
+  C:0F22H         LINE#         39
+  C:0F22H         LINE#         40
+  C:0F37H         LINE#         42
+  C:0F37H         LINE#         43
+  -------         ENDPROC       _DHT11_GETTEMPERATURE
+  -------         PROC          _DHT11_GETHUMIDITY
+  D:0001H         SYMBOL        sensorData
+  -------         DO            
+  D:0006H         SYMBOL        humidity
+  -------         ENDDO         
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/08/2025  09:35:58  PAGE 8
+
+
+  C:0F76H         LINE#         45
+  C:0F76H         LINE#         46
+  C:0F76H         LINE#         47
+  C:0F88H         LINE#         49
+  C:0F88H         LINE#         50
+  -------         ENDPROC       _DHT11_GETHUMIDITY
+  -------         PROC          _DHT11_GETSENSORDATA
+  D:0008H         SYMBOL        sensorData
+  -------         DO            
+  D:0004H         SYMBOL        i
+  -------         ENDDO         
+  C:0E94H         LINE#         52
+  C:0E9AH         LINE#         53
+  C:0E9AH         LINE#         55
+  C:0E9CH         LINE#         56
+  C:0E9CH         LINE#         57
+  C:0EAEH         LINE#         58
+  C:0EB2H         LINE#         59
+  -------         ENDPROC       _DHT11_GETSENSORDATA
+  -------         PROC          I2C_INIT
+  C:0FF0H         LINE#         10
+  C:0FF0H         LINE#         11
+  C:0FF0H         LINE#         12
+  C:0FF2H         LINE#         13
+  C:0FF4H         LINE#         14
+  -------         ENDPROC       I2C_INIT
+  -------         PROC          I2C_START
+  C:0FF5H         LINE#         16
+  C:0FF5H         LINE#         17
+  C:0FF5H         LINE#         18
+  C:0FF7H         LINE#         19
+  C:0FF9H         LINE#         20
+  -------         ENDPROC       I2C_START
+  -------         PROC          I2C_RESTART
+  C:0FCFH         LINE#         22
+  C:0FCFH         LINE#         23
+  C:0FCFH         LINE#         24
+  C:0FD1H         LINE#         25
+  C:0FD3H         LINE#         26
+  C:0FD5H         LINE#         27
+  C:0FD7H         LINE#         28
+  -------         ENDPROC       I2C_RESTART
+  -------         PROC          I2C_STOP
+  C:0FD8H         LINE#         30
+  C:0FD8H         LINE#         31
+  C:0FD8H         LINE#         32
+  C:0FDAH         LINE#         33
+  C:0FDCH         LINE#         34
+  C:0FDEH         LINE#         35
+  C:0FE0H         LINE#         36
+  -------         ENDPROC       I2C_STOP
+  -------         PROC          _I2C_ACK
+  D:0007H         SYMBOL        ackn
+  C:0FAFH         LINE#         38
+  C:0FAFH         LINE#         39
+  C:0FAFH         LINE#         40
+  C:0FB4H         LINE#         41
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/08/2025  09:35:58  PAGE 9
+
+
+  C:0FB6H         LINE#         42
+  C:0FB8H         LINE#         43
+  C:0FBAH         LINE#         44
+  -------         ENDPROC       _I2C_ACK
+  -------         PROC          _I2C_WRITE
+  D:0007H         SYMBOL        _data
+  -------         DO            
+  D:0006H         SYMBOL        tx
+  -------         ENDDO         
+  C:0DB3H         LINE#         46
+  C:0DB3H         LINE#         47
+  C:0DB3H         LINE#         51
+  C:0DB5H         LINE#         52
+  C:0DB5H         LINE#         53
+  C:0DC8H         LINE#         54
+  C:0DCAH         LINE#         55
+  C:0DCCH         LINE#         56
+  C:0DD0H         LINE#         58
+  C:0DD5H         LINE#         60
+  C:0DDAH         LINE#         61
+  -------         ENDPROC       _I2C_WRITE
+  -------         PROC          _I2C_READ
+  D:0007H         SYMBOL        ackState
+  -------         DO            
+  D:0004H         SYMBOL        bitValue
+  D:0005H         SYMBOL        rx
+  D:0006H         SYMBOL        _data
+  -------         ENDDO         
+  C:0E02H         LINE#         63
+  C:0E02H         LINE#         64
+  C:0E02H         LINE#         65
+  C:0E04H         LINE#         67
+  C:0E05H         LINE#         68
+  C:0E05H         LINE#         69
+  C:0E07H         LINE#         71
+  C:0E0CH         LINE#         72
+  C:0E1CH         LINE#         74
+  C:0E1EH         LINE#         75
+  C:0E22H         LINE#         77
+  C:0E25H         LINE#         79
+  C:0E27H         LINE#         80
+  -------         ENDPROC       _I2C_READ
+  -------         PROC          MAX6953_INIT
+  C:0E71H         LINE#         9
+  C:0E71H         LINE#         10
+  C:0E71H         LINE#         11
+  C:0E78H         LINE#         12
+  C:0E7FH         LINE#         13
+  C:0E86H         LINE#         14
+  C:0E8DH         LINE#         15
+  -------         ENDPROC       MAX6953_INIT
+  -------         PROC          _MAX6953_WRITE
+  D:0004H         SYMBOL        reg
+  D:0005H         SYMBOL        data_
+  C:0F0BH         LINE#         18
+  C:0F0DH         LINE#         19
+  C:0F0DH         LINE#         20
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/08/2025  09:35:58  PAGE 10
+
+
+  C:0F10H         LINE#         22
+  C:0F15H         LINE#         23
+  C:0F1AH         LINE#         24
+  C:0F1FH         LINE#         26
+  -------         ENDPROC       _MAX6953_WRITE
+  -------         PROC          _MAX6953_DISPLAYNUMBER
+  D:0006H         SYMBOL        number
+  -------         DO            
+  D:003EH         SYMBOL        strNum
+  -------         ENDDO         
+  C:0EB3H         LINE#         29
+  C:0EB3H         LINE#         30
+  C:0EB3H         LINE#         32
+  C:0EC9H         LINE#         34
+  -------         ENDPROC       _MAX6953_DISPLAYNUMBER
+  -------         PROC          _MAX6953_DISPLAYTEXT
+  D:0008H         SYMBOL        text
+  -------         DO            
+  D:000BH         SYMBOL        i
+  D:0005H         SYMBOL        asciiChar
+  -------         ENDDO         
+  C:0D1CH         LINE#         37
+  C:0D22H         LINE#         38
+  C:0D22H         LINE#         41
+  C:0D25H         LINE#         43
+  C:0D2AH         LINE#         44
+  C:0D2FH         LINE#         46
+  C:0D49H         LINE#         47
+  C:0D49H         LINE#         48
+  C:0D79H         LINE#         50
+  C:0D7CH         LINE#         51
+  C:0D80H         LINE#         53
+  -------         ENDPROC       _MAX6953_DISPLAYTEXT
+  -------         PROC          _GETCUSTOMCHAR
+  D:0007H         SYMBOL        asciiChar
+  -------         DO            
+  D:0006H         SYMBOL        i
+  D:0005H         SYMBOL        digit
+  -------         ENDDO         
+  C:0EF0H         LINE#         56
+  C:0EF0H         LINE#         57
+  C:0EF0H         LINE#         58
+  C:0EF3H         LINE#         60
+  C:0EFAH         LINE#         61
+  C:0EFAH         LINE#         62
+  C:0EFDH         LINE#         63
+  C:0EFDH         LINE#         64
+  C:0F03H         LINE#         65
+  C:0F05H         LINE#         66
+  C:0F05H         LINE#         67
+  C:0F06H         LINE#         68
+  C:0F08H         LINE#         70
+  C:0F0AH         LINE#         71
+  -------         ENDPROC       _GETCUSTOMCHAR
+  -------         PROC          MAIN
+  C:0C98H         LINE#         9
+  C:0C98H         LINE#         10
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/08/2025  09:35:58  PAGE 11
+
+
+  C:0C98H         LINE#         11
+  C:0C9BH         LINE#         12
+  C:0C9EH         LINE#         14
+  C:0C9EH         LINE#         15
+  C:0C9EH         LINE#         16
+  C:0CA1H         LINE#         18
+  C:0CA7H         LINE#         19
+  C:0CA7H         LINE#         20
+  C:0CB0H         LINE#         21
+  C:0CB0H         LINE#         23
+  C:0CBCH         LINE#         24
+  C:0CBCH         LINE#         25
+  C:0CC2H         LINE#         26
+  C:0CC4H         LINE#         28
+  C:0CC4H         LINE#         29
+  C:0CD1H         LINE#         30
+  C:0CD8H         LINE#         32
+  C:0CDBH         LINE#         33
+  C:0CECH         LINE#         35
+  C:0CEFH         LINE#         36
+  C:0D0AH         LINE#         38
+  C:0D13H         LINE#         39
+  C:0D13H         LINE#         41
+  C:0D1AH         LINE#         42
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        ?C?CLDPTR
+  C:0B5CH         PUBLIC        ?C?CLDPTR
+  -------         ENDMOD        ?C?CLDPTR
+
+  -------         MODULE        ?C?CLDOPTR
+  C:0B75H         PUBLIC        ?C?CLDOPTR
+  -------         ENDMOD        ?C?CLDOPTR
+
+  -------         MODULE        ?C?CSTOPTR
+  C:0BA2H         PUBLIC        ?C?CSTOPTR
+  -------         ENDMOD        ?C?CSTOPTR
+
+  -------         MODULE        PRINTF
+  D:0008H         PUBLIC        ?_PRINTF517?BYTE
+  D:0008H         PUBLIC        ?_PRINTF?BYTE
+  D:0008H         PUBLIC        ?_SPRINTF517?BYTE
+  D:0008H         PUBLIC        ?_SPRINTF?BYTE
+  C:0862H         PUBLIC        _PRINTF
+  C:0862H         PUBLIC        _PRINTF517
+  C:085CH         PUBLIC        _SPRINTF
+  C:085CH         PUBLIC        _SPRINTF517
+  -------         ENDMOD        PRINTF
+
+  -------         MODULE        STRLEN
+  C:0F4DH         PUBLIC        _STRLEN
+  -------         ENDMOD        STRLEN
+
+  -------         MODULE        ?C?CSTPTR
+  C:0BC4H         PUBLIC        ?C?CSTPTR
+  -------         ENDMOD        ?C?CSTPTR
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  02/08/2025  09:35:58  PAGE 12
+
+
+
+  -------         MODULE        ?C?PLDIIDATA
+  C:0BD6H         PUBLIC        ?C?PLDIIDATA
+  -------         ENDMOD        ?C?PLDIIDATA
+
+  -------         MODULE        ?C?CCASE
+  C:0BE6H         PUBLIC        ?C?CCASE
+  -------         ENDMOD        ?C?CCASE
+
+  -------         MODULE        PUTCHAR
+  C:0DDBH         PUBLIC        _PUTCHAR
+  -------         ENDMOD        PUTCHAR
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?___DELAY_US?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?I2C_INIT?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?I2C_RESTART?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_I2C_READ?MAIN
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_MAX6953_DISPLAYNUMBER?MAIN
+
+******************************************************************************
+* RESTRICTED VERSION WITH 0800H BYTE CODE SIZE LIMIT; USED: 033DH BYTE (40%) *
+******************************************************************************
+
+Program Size: data=64.2 xdata=0 code=2054
+LINK/LOCATE RUN COMPLETE.  5 WARNING(S),  0 ERROR(S)
